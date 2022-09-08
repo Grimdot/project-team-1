@@ -1,0 +1,22 @@
+.more-photo__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+}
+
+.more-photo__item {
+  max-width: 280px;
+
+  @media screen and (max-width: 767px) {
+    margin: auto;
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+}
