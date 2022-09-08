@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Cera Pro', sans-serif;
-  font-size: 16px;
+  @include font(300, 16, 20);
   background-color: $background-color;
   color: $main-color;
 }
