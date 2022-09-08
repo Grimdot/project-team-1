@@ -1,2 +1,28 @@
-@import './common';
-@import './example';
+@import './utils/vars';
+@import './utils/hidden';
+
+@import './base/common';
+@import './base/fonts';
+@import './base/reset';
+
+@import './components/container';
+@import './components/btn';
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/main-page/hero';
+@import './layout/main-page/gallery';
+@import './layout/main-page/more-photo';
+@import './layout/3d-modeling/hero';
+@import './layout/3d-modeling/methods-of-creations';
+@import './layout/3d-modeling/we-create-model';
+@import './layout/3d-scanning/hero';
+@import './layout/3d-scanning/scan-process';
+@import './layout/3d-printing/model-examples';
+@import './layout/3d-printing/process-description';
+@import './layout/take-order/hero';
+@import './layout/take-order/order-form';
+@import './layout/take-order/order-contacts';
+@import './layout/contacts/hero';
+@import './layout/contacts/contacts';
+@import './layout/contacts/contacts-form';
