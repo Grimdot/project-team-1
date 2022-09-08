@@ -14,11 +14,26 @@ a {
 .section {
   padding-top: 40px;
 
-  @media screen and (min-width: 768px) {
+  @include miw(768px) {
     padding-top: 60px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @include miw(1440px) {
     padding-top: 120px;
   }
+}
+
+.hero-title {
+  color: $accent-color;
+  @include font(700, 48, 60);
+}
+
+.section-title {
+  color: $accent-color;
+  @include font(700, 36, 45);
+}
+
+.secondary-title {
+  color: $accent-color;
+  @include font(300, 18, 23);
 }
