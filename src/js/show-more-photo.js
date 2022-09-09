@@ -3,6 +3,7 @@ const list = document.querySelector("[data-show-img]");
 
 let indexImg = 0;
 
+// Додає івент на кнопку show
 show.addEventListener("click", (Event) => {
     event.preventDefault();
 

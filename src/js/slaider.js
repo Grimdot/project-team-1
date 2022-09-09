@@ -9,7 +9,7 @@ const sliderBtnClose = document.querySelector("[data-slider-close]");
 let cardIndex = -1;
 let pictureFull;
 
-
+//Додає класи слайдеру та зображенню в слайдері
 for (const card of cards) {
     card.addEventListener("click", (Event) => {
         event.preventDefault();
@@ -23,7 +23,7 @@ for (const card of cards) {
 
     });
 }
-
+// Додає івент на кнопки слайдеру
 sliderBtnRight.addEventListener("click", (Event) => {
     event.preventDefault();
     changePicture("right")
@@ -34,6 +34,8 @@ sliderBtnLeft.addEventListener("click", (Event) => {
     changePicture("left")
 });
 
+
+// Додає перебіл зображень
 function changePicture(dir) {
     if (dir == "left") {
         if (cardIndex > 0) {
@@ -54,6 +56,7 @@ function changePicture(dir) {
     pictureFull = newPictureFull;
 }
 
+// Додає івент на кнопку закриття слайдеру
 sliderBtnClose.addEventListener("click", (Event) => {
     event.preventDefault();
     slider.classList.remove("more-photo__slider--open");
