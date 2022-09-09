@@ -1,0 +1,11 @@
+.scan-hero__hero-title {
+  margin-bottom: 16px;
+}
+
+.scan-hero__secondary-title {
+  color: $main-color;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
