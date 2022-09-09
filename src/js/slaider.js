@@ -16,6 +16,7 @@ for (const card of cards) {
         cardIndex = cards.indexOf(card);
         pictureFull = picture[cardIndex].cloneNode();
         pictureFull.style.objectFit = "contain";
+        pictureFull.setAttribute("sizes", "(min-width: 320px) 2880px");
         sliderContainer.append(pictureFull);
         slider.classList.add("more-photo__slider--open");
 
