@@ -1,3 +1,10 @@
 .scan-process__section-title {
   margin-bottom: 16px;
 }
+
+.scan-process-list__subtitle {
+  @include font(400, 14, 18);
+  text-align: center;
+
+  color: $accent-color;
+}

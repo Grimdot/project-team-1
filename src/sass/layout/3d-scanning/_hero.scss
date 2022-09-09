@@ -2,10 +2,6 @@
   margin-bottom: 16px;
 }
 
-.scan-hero__secondary-title {
-  color: $main-color;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
+.scan-hero__text:not(:last-child) {
+  margin-bottom: 16px;
 }
