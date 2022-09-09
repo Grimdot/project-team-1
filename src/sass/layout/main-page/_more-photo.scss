@@ -56,16 +56,20 @@
   }
 }
 
-.more-photo__item {
-  // max-width: 280px;
-
-  @media screen and (max-width: 767px) {
-    // margin: auto;
-
+.more-photo__list--show {
+  & .more-photo__item{
     &:nth-child(n + 4) {
       display: none;
     }
   }
+
+  // & .more-photo__item{
+  //   @media screen and (max-width: 767px) {
+  //   &:nth-child(n + 4) {
+  //     display: none;
+  //   }
+  // }}
+  
 }
 
 // стилі для слайдеру
@@ -125,7 +129,6 @@
   top: 50%;
 
   color: #ffffff;
-
 }
 
 .more-photo__btn-left {
@@ -179,4 +182,17 @@
     width: 42px;
     height: 42px;
   }
+}
+
+// стилі для кнопки яка відкриває всю галерею
+
+.more-photo__btn-show {
+  display: flex;
+  margin: auto;
+
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  color: #487996;
 }
