@@ -21,7 +21,9 @@
 
 body {
   font-family: "Cera Pro", sans-serif;
+  font-weight: 300;
   font-size: 16px;
+  line-height: 1.25;
   background-color: #ffffff;
   color: #2b2b2b;
 }
@@ -41,6 +43,62 @@ a {
 @media screen and (min-width: 1440px) {
   .section {
     padding-top: 120px;
+  }
+}
+
+.hero-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.25;
+  }
+}
+
+.section-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2777777778;
+}
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+.secondary-title {
+  color: #487996;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1440px) {
+  .secondary-title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.2777777778;
   }
 }
 
@@ -111,7 +169,7 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -137,7 +195,175 @@ img {
   }
 }
 
-.header {
+.footer {
   display: flex;
-  flex-direction: column;
+  background-color: #f5f5fa;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .footer {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__logo {
+    margin-right: 277px;
+  }
+}
+
+.footer__logo-img {
+  display: inline-block;
+  width: 192px;
+  height: 48px;
+}
+@media screen and (min-width: 1440px) {
+  .footer__logo-img {
+    width: 192px;
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__info {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__info {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__menu {
+    margin-top: 19px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__menu {
+    margin-right: 52px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__menu {
+    margin-right: 103px;
+  }
+}
+
+.footer__menu-link {
+  color: #2b2b2b;
+}
+@media screen and (min-width: 1440px) {
+  .footer__menu-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .footer__menu-link:hover, .footer__menu-link:focus {
+    color: #487996;
+  }
+}
+
+.footer__menu-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__socials {
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .footer__socials {
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__socials {
+    margin-right: 161px;
+  }
+}
+
+.footer__socials-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer__socials-link {
+  color: #2b2b2b;
+}
+@media screen and (min-width: 1440px) {
+  .footer__socials-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .footer__socials-link:hover, .footer__socials-link:focus {
+    color: #487996;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__contacts {
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .footer__contacts {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__contacts-mail-wrap {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts-mail-wrap {
+    margin-bottom: 16px;
+  }
+}
+
+.footer__contacts-mail {
+  font-style: normal;
+}
+
+.footer__contacts-mail-list {
+  margin-top: 8px;
+}
+
+.footer__contacts-mail-link {
+  font-style: normal;
+  color: #487996;
+}
+
+.footer__contacts-tel {
+  font-style: normal;
+}
+
+.footer__contacts-tel-item {
+  margin-top: 8px;
+}
+
+.footer__contacts-tel-link {
+  font-style: normal;
+  color: #487996;
 }/*# sourceMappingURL=index.css.map */
