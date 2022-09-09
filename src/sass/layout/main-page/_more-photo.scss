@@ -57,7 +57,7 @@
 }
 
 .more-photo__list--show {
-  & .more-photo__item{
+  & .more-photo__item {
     &:nth-child(n + 4) {
       display: none;
     }
@@ -69,7 +69,10 @@
   //     display: none;
   //   }
   // }}
-  
+}
+
+.more-photo__img {
+  cursor: pointer;
 }
 
 // стилі для слайдеру
@@ -129,6 +132,8 @@
   top: 50%;
 
   color: #ffffff;
+
+  cursor: pointer;
 }
 
 .more-photo__btn-left {
@@ -195,4 +200,6 @@
   padding: 0;
 
   color: #487996;
+
+  cursor: pointer;
 }
