@@ -58,7 +58,6 @@
 
 .more-photo__item {
   // max-width: 280px;
-  
 
   @media screen and (max-width: 767px) {
     // margin: auto;
@@ -117,24 +116,42 @@
 .more-photo__btn-close {
   border: none;
   background-color: transparent;
-  width: 45px;
-  height: 45px;
+  // width: 45px;
+  // height: 45px;
   padding: 0;
   margin: 0;
 
   position: absolute;
-
   top: 50%;
+
+  color: #ffffff;
+
 }
 
 .more-photo__btn-left {
-  transform: translate(-100%, -50%) rotate(90deg);
-  left: -21px;
+  transform: translate(-100%, -50%);
+  left: -10px;
+
+  @media screen and (min-width: 768px) {
+    left: -21px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    left: -32px;
+  }
 }
 
 .more-photo__btn-right {
-  transform: translate(+100%, -50%) rotate(-90deg);
-  right: -21px;
+  transform: translate(+100%, -50%) rotate(180deg);
+  right: -10px;
+
+  @media screen and (min-width: 768px) {
+    right: -21px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    right: -32px;
+  }
 }
 
 .more-photo__btn-close {
@@ -148,8 +165,18 @@
 // силі для іконки завантаження
 .more-photo__icon {
   display: block;
-  margin: auto;
+  margin: 0;
 
   stroke: currentColor;
   fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 42px;
+    height: 42px;
+  }
 }
