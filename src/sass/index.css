@@ -44,6 +44,27 @@ a {
   }
 }
 
+.hero-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.25;
+}
+
+.section-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.secondary-title {
+  color: #487996;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2777777778;
+}
+
 @font-face {
   font-family: "Caviar Dreams";
   src: url("../fonts/CaviarDreams.eot");
@@ -140,4 +161,25 @@ img {
 .header {
   display: flex;
   flex-direction: column;
+}
+
+.main-page-hero {
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-page-hero__title {
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  color: #2b2b2b;
+  padding-bottom: 32px;
+}
+
+.main-page-hero__title-small {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: #2b2b2b;
 }/*# sourceMappingURL=index.css.map */
