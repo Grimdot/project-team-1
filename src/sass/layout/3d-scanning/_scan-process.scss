@@ -1,5 +1,26 @@
+.scan-process {
+  padding-bottom: 40px;
+}
+
 .scan-process__section-title {
   margin-bottom: 16px;
+}
+
+.scan-process-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 20px;
+}
+
+.scan-process-list__item {
+  padding: 15px 19px;
+  flex-basis: calc((100% - 20px) / 2);
+
+  background: $background-color;
+  box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8),
+    inset -1px -1px 16px #ffffff;
+  border-radius: 50px 0px;
 }
 
 .scan-process-list__subtitle {

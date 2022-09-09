@@ -1,7 +1,24 @@
+// .scan-hero {
+//   background-image: url(../images/3d-scanning/3d-scanning-hero-mobile@1x.jpg);
+//   background-repeat: no-repeat;
+//   background-position: bottom;
+//   background-size: 280px 199px;
+// }
+
 .scan-hero__hero-title {
   margin-bottom: 16px;
 }
 
-.scan-hero__text:not(:last-child) {
+.scan-hero-list__item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.scan-hero__img {
+  margin-top: 20px;
+
+  background-image: url(../images/3d-scanning/3d-scanning-hero-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 280px 199px;
+  padding-bottom: 65%;
 }
