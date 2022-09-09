@@ -56,19 +56,31 @@
   }
 }
 
-.more-photo__list--show {
-  & .more-photo__item {
-    &:nth-child(n + 4) {
-      display: none;
-    }
+.more-photo__item {
+  @media screen and (max-width: 319px) {
+    width: 100%;
   }
+  
 
-  // & .more-photo__item{
-  //   @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    min-width: 280px;
+  }
+}
+
+.more-photo__list--show {
+  // & .more-photo__item {
   //   &:nth-child(n + 4) {
   //     display: none;
   //   }
-  // }}
+  // }
+
+  & .more-photo__item {
+    @media screen and (max-width: 767px) {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
 }
 
 .more-photo__img {
