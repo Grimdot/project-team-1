@@ -2,7 +2,7 @@
   <div class="container more-photo__container">
     <h2 class="section-title more-photo__section-title">БІЛЬШЕ ФОТО</h2>
 
-    <ul class="more-photo__list">
+    <ul class="more-photo__list more-photo__list--show" data-show-img>
       <li class="more-photo__item">
         <picture>
           <source
@@ -34,7 +34,7 @@
             srcset="./images/main/more-photos/more-photos-main-1@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-mobile-1.jpg"
-            alt=""
+            alt="Перший приклад 3D друку"
             width="280"
           />
         </picture>
@@ -70,7 +70,7 @@
             srcset="./images/main/more-photos/more-photos-main-2@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-mobile-2.jpg"
-            alt=""
+            alt="Другий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -106,7 +106,7 @@
             srcset="./images/main/more-photos/more-photos-main-3@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-mobile-3.jpg"
-            alt=""
+            alt="Третій приклад 3D друку"
             width="280"
           />
         </picture>
@@ -142,7 +142,7 @@
             srcset="./images/main/more-photos/more-photos-main-4@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-4.jpg"
-            alt=""
+            alt="Четвертий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -178,7 +178,7 @@
             srcset="./images/main/more-photos/more-photos-main-5@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-5.jpg"
-            alt=""
+            alt="П'ятийприклад 3D друку"
             width="280"
           />
         </picture>
@@ -214,7 +214,7 @@
             srcset="./images/main/more-photos/more-photos-main-6@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-6.jpg"
-            alt=""
+            alt="Шостий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -250,7 +250,7 @@
             srcset="./images/main/more-photos/more-photos-main-7@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-7.jpg"
-            alt=""
+            alt="Сьомий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -286,7 +286,7 @@
             srcset="./images/main/more-photos/more-photos-main-8@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-8.jpg"
-            alt=""
+            alt="Восьмий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -322,7 +322,7 @@
             srcset="./images/main/more-photos/more-photos-main-9@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-9.jpg"
-            alt=""
+            alt="Дев'ятий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -358,7 +358,7 @@
             srcset="./images/main/more-photos/more-photos-main-10@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-10.jpg"
-            alt=""
+            alt="Десятий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -394,7 +394,7 @@
             srcset="./images/main/more-photos/more-photos-main-11@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-11.jpg"
-            alt=""
+            alt="Одинадцятий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -430,7 +430,7 @@
             srcset="./images/main/more-photos/more-photos-main-12@2x.jpg 2880w"
             class="more-photo__img"
             src="./images/main/more-photos/more-photos-tablet-12.jpg"
-            alt=""
+            alt="Дванадцятий приклад 3D друку"
             width="280"
           />
         </picture>
@@ -457,10 +457,14 @@
       </div>
     </div>
 
+    <button type="button" class="more-photo__btn-show" data-show>
     <svg class="more-photo__icon" height="45" width="45">
       <use href="./images/icons.svg#icon-downloading"></use>
     </svg>
+        </button>
+
   </div>
 </section>
 
 <script src="./js/slaider.js"></script>
+<script src="./js/show-more-photo.js"></script>
