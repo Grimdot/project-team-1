@@ -14,20 +14,17 @@
 }
 
 .we-create-model__title {
-  font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
 
-  color: $accent-color;
   max-width: 250px;
 
-  //   @media screen and (min-width: 768px)
   @include miw(768px) {
     font-size: 24px;
     max-width: 648px;
   }
-  //   @media screen and (min-width: 1440px)
+
   @include miw(1440px) {
     font-size: 36px;
     max-width: 842px;
@@ -39,7 +36,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  //   @media screen and (min-width: 768px)
   @include miw(768px) {
     flex-wrap: nowrap;
     gap: 32px;
@@ -56,12 +52,11 @@
     margin-right: 0;
   }
 
-  //   @media screen and (min-width: 768px)
   @include miw(768px) {
     margin-top: 24px;
     margin-right: 0;
   }
-  //   @media screen and (min-width: 1440px)
+
   @include miw(1440px) {
     margin-top: 40px;
   }
@@ -73,7 +68,6 @@
 .we-create-model__img2 {
   border-radius: 40% 0;
 
-  //   @media screen and (min-width: 1440px)
   @include miw(1440px) {
     border-radius: 40% 0 40%;
   }
