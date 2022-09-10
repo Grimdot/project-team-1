@@ -1,6 +1,5 @@
 .order-header {
   display: flex;
-  padding: 0 10px;
   width: 100%;
 }
 .order-header__block {
@@ -10,7 +9,7 @@
 }
 
 .order-title {
-  @include font(700, 22, 30);
+  @include font(700, 24, 30);
   color: $accent-color;
   justify-content: center;
   margin-bottom: 16px;
