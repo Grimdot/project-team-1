@@ -48,12 +48,33 @@
     max-width: 704px;
     gap: 32px;
     margin-bottom: 12px;
+
+    //додаю Masonry Layout
+    // display: grid;
+    // grid-gap: 32px;
+
+    // // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(115.2px, 1fr));
+    // grid-auto-rows: 180px 180px 152px 180px;
+    // grid-auto-flow: dense;
   }
 
   @include miw(1440px) {
     max-width: 1142px;
-    gap: 32px;
+
+    //додаю Masonry Layout
+    display: grid;
+    grid-gap: 32px;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-auto-rows: 278px 278px 203px 278px;
+    grid-auto-flow: dense;
   }
+}
+
+//додаю Masonry Layout
+.more-photo__itam--wide {
+  grid-column: span 2;
 }
 
 .more-photo__item {
@@ -84,6 +105,13 @@
 
 .more-photo__img {
   cursor: pointer;
+
+  //додаю Masonry Layout
+  vertical-align: middle;
+  display: inline-block;
+
+  height: 100%;
+  object-fit: cover;
 }
 
 // стилі для слайдеру
