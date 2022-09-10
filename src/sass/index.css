@@ -21,7 +21,9 @@
 
 body {
   font-family: "Cera Pro", sans-serif;
+  font-weight: 300;
   font-size: 16px;
+  line-height: 1.25;
   background-color: #ffffff;
   color: #2b2b2b;
 }
@@ -41,6 +43,62 @@ a {
 @media screen and (min-width: 1440px) {
   .section {
     padding-top: 120px;
+  }
+}
+
+.hero-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.25;
+  }
+}
+
+.section-title {
+  color: #487996;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2777777778;
+}
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+.secondary-title {
+  color: #487996;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1440px) {
+  .secondary-title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.2777777778;
   }
 }
 
@@ -111,7 +169,7 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -135,9 +193,4 @@ img {
   .container {
     width: 1440px;
   }
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */
