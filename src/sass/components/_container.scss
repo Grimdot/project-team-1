@@ -3,16 +3,16 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @include maw(767px) {
+  @include max-width($tablet) {
     max-width: 480px;
   }
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     width: 768px;
     padding: 0 32px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     width: 1440px;
   }
 }
