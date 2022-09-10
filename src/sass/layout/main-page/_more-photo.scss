@@ -2,17 +2,17 @@
 .more-photo__section {
   padding-bottom: 60px;
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     padding-bottom: 80px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     padding-bottom: 100px;
   }
 }
 
 .more-photo__container {
-  @include miw(1440px) {
+  @include min-width($desktop) {
     width: 1206px;
   }
 }
@@ -21,11 +21,11 @@
 .more-photo__section-title {
   margin-bottom: 16px;
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     margin-bottom: 32px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     margin-bottom: 60px;
   }
 }
@@ -38,13 +38,13 @@
 
   margin-bottom: 16px;
 
-  @include miw(320px) {
+  @include min-width(320px) {
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     max-width: 704px;
     gap: 32px;
     margin-bottom: 12px;
@@ -59,7 +59,7 @@
     // grid-auto-flow: dense;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     max-width: 1142px;
 
     //додаю Masonry Layout
@@ -78,11 +78,11 @@
 }
 
 .more-photo__item {
-  @include maw(319px) {
+  @include max-width(319px) {
     width: 100%;
   }
 
-  @include miw-maw(320px, 767px) {
+  @include min-width-max-width(320px, $tablet) {
     min-width: 280px;
   }
 }
@@ -95,7 +95,7 @@
   // }
 
   & .more-photo__item {
-    @include maw(767px) {
+    @include max-width($tablet) {
       &:nth-child(n + 4) {
         display: none;
       }
@@ -147,11 +147,11 @@
   // max-height: 50%;
   max-width: 50%;
 
-  @include miw(768px) {
+  @include min-width($desktop) {
     max-width: 554px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     max-width: 906px;
   }
 }
@@ -179,11 +179,11 @@
   transform: translate(-100%, -50%);
   left: -10px;
 
-  @include miw(768px) {
+  @include min-width($desktop) {
     left: -21px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     left: -32px;
   }
 }
@@ -192,11 +192,11 @@
   transform: translate(+100%, -50%) rotate(180deg);
   right: -10px;
 
-  @include miw(768px) {
+  @include min-width($desktop) {
     right: -21px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     right: -32px;
   }
 }
@@ -217,12 +217,12 @@
   stroke: currentColor;
   fill: currentColor;
 
-  @include miw(768px) {
+  @include min-width($desktop) {
     width: 26px;
     height: 26px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     width: 42px;
     height: 42px;
   }

@@ -1,17 +1,17 @@
-.we-create-model {
-  background: $background-color;
+// .we-create-model {
+//   background: $background-color;
 
-  //   position: relative;
+//   //   position: relative;
 
-  //   padding-left: 20px;
-  //   padding-right: 20px;
+//   //   padding-left: 20px;
+//   //   padding-right: 20px;
 
-  //   //   @media screen and (min-width: 768px)
-  //   @include miw(768px) {
-  //     padding-left: 32px;
-  //     padding-right: 32px;
-  //   }
-}
+//   //   //   @media screen and (min-width: 768px)
+//   //   @include min-width($tablet) {
+//   //     padding-left: 32px;
+//   //     padding-right: 32px;
+//   //   }
+// }
 
 .we-create-model__title {
   font-size: 16px;
@@ -20,12 +20,12 @@
 
   max-width: 250px;
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     font-size: 24px;
     max-width: 648px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     font-size: 36px;
     max-width: 842px;
     margin-left: 117px;
@@ -36,7 +36,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     flex-wrap: nowrap;
     gap: 32px;
   }
@@ -52,12 +52,12 @@
     margin-right: 0;
   }
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     margin-top: 24px;
     margin-right: 0;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     margin-top: 40px;
   }
 }
@@ -68,7 +68,7 @@
 .we-create-model__img2 {
   border-radius: 40% 0;
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     border-radius: 40% 0 40%;
   }
 }
