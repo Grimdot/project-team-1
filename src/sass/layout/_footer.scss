@@ -1,163 +1,159 @@
 .footer {
+  position: relative;
+
+  z-index: 999;
+
+  display: flex;
+  background-color: $secondary-background-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 400px;
+  @include min-width($desktop) {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer__container {
+  @include max-width($tablet) {
+    text-align: center;
+    width: 100%;
+  }
+
+  @include min-width($desktop) {
     display: flex;
-    background-color: #f5f5fa;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    @media screen and (min-width: 1440px) {
-      font-size: 16px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+  }
+}
+
+.footer__logo {
+  @include min-width-max-width($tablet, $desktop) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 277px;
+  }
+}
+
+.footer__logo-img {
+  display: inline-block;
+  width: 192px;
+  height: 48px;
+}
+
+.footer__info {
+  @include min-width($tablet) {
+    display: flex;
+  }
+}
+
+.footer__menu {
+  @include max-width($tablet) {
+    margin-top: 19px;
+  }
+
+  @include min-width($tablet) {
+    margin-right: 52px;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 103px;
+  }
+}
+
+.footer__menu-link {
+  color: $main-color;
+
+  @include min-width($desktop) {
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
-  
-  .footer__container {
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
-  
-    @media screen and (min-width: 1440px) {
-      display: flex;
+}
+
+.footer__menu-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer__socials {
+  @include max-width($tablet) {
+    margin-top: 24px;
+  }
+
+  @include min-width-max-width($tablet, $desktop) {
+    margin-right: auto;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 161px;
+  }
+}
+
+.footer__socials-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer__socials-link {
+  color: $main-color;
+
+  @include min-width($desktop) {
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
-  
-  .footer__logo {
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-  
-    @media screen and (min-width: 1440px) {
-      margin-right: 277px;
-    }
+}
+
+.footer__contacts {
+  @include max-width($tablet) {
+    margin-top: 24px;
   }
-  
-  .footer__logo-img {
-    display: inline-block;
-    width: 192px;
-    height: 48px;
-  
-    @media screen and (min-width: 1440px) {
-      width: 192px;
-      height: 48px;
-    }
+
+  @include min-width-max-width($tablet, $desktop) {
+    text-align: end;
   }
-  
-  .footer__info {
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
-  
-    @media screen and (min-width: 1440px) {
-      font-size: 16px;
-    }
+}
+
+.footer__contacts-mail-wrap {
+  @include max-width($tablet) {
+    margin-bottom: 24px;
   }
-  
-  .footer__menu {
-    @media screen and (max-width: 767px) {
-      margin-top: 19px;
-    }
-  
-    @media screen and (min-width: 768px) {
-      margin-right: 52px;
-    }
-  
-    @media screen and (min-width: 1440px) {
-      margin-right: 103px;
-    }
+
+  @include min-width($tablet) {
+    margin-bottom: 16px;
   }
-  
-  .footer__menu-link {
-    color: #2b2b2b;
-  
-    @media screen and (min-width: 1440px) {
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-      &:hover,
-      &:focus {
-        color: #487996;
-      }
-    }
-  }
-  
-  .footer__menu-item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  
-  .footer__socials {
-    @media screen and (max-width: 767px) {
-      margin-top: 24px;
-    }
-  
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-      margin-right: auto;
-    }
-  
-    @media screen and (min-width: 1440px) {
-      margin-right: 161px;
-    }
-  }
-  
-  .footer__socials-item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-  
-  .footer__socials-link {
-    color: #2b2b2b;
-  
-    @media screen and (min-width: 1440px) {
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-      &:hover,
-      &:focus {
-        color: #487996;
-      }
-    }
-  }
-  
-  .footer__contacts {
-    @media screen and (max-width: 767px) {
-      margin-top: 24px;
-    }
-  
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-      text-align: end;
-    }
-  }
-  
-  .footer__contacts-mail-wrap {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 24px;
-    }
-  
-    @media screen and (min-width: 768px) {
-      margin-bottom: 16px;
-    }
-  }
-  
-  .footer__contacts-mail {
-    font-style: normal;
-  }
-  
-  .footer__contacts-mail-list {
-    margin-top: 8px;
-  }
-  
-  .footer__contacts-mail-link {
-    font-style: normal;
-    color: #487996;
-  }
-  
-  .footer__contacts-tel {
-    font-style: normal;
-  }
-  
-  .footer__contacts-tel-item {
-    margin-top: 8px;
-  }
-  
-  .footer__contacts-tel-link {
-    font-style: normal;
-    color: #487996;
-  }
-  
+}
+
+.footer__contacts-mail {
+  font-style: normal;
+}
+
+.footer__contacts-mail-list {
+  margin-top: 8px;
+}
+
+.footer__contacts-mail-link {
+  font-style: normal;
+  color: $accent-color;
+}
+
+.footer__contacts-tel {
+  font-style: normal;
+}
+
+.footer__contacts-tel-item {
+  margin-top: 8px;
+}
+
+.footer__contacts-tel-link {
+  font-style: normal;
+  color: $accent-color;
+}
