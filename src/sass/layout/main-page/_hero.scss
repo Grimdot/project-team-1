@@ -1,0 +1,107 @@
+// .main-page-hero {
+//     padding-bottom: 40px;
+// }
+
+.main-page-hero__title {
+    @include font(400, 18, 21);
+    text-align: center;
+    color: $main-color;
+    padding-bottom: 32px;
+    font-family: Caviar Dreams;
+    width: 280px;
+    margin: 0 auto;
+
+    @include min-width-max-width(768px,1439px) {
+        @include font(400, 24, 28);
+        padding-bottom: 60px;
+        width: 336px;
+        margin: 0 auto;
+    }
+
+    @include min-width(1440px) {
+        @include font(400, 48, 56);
+        padding-bottom: 60px;
+        width: 630px;
+        margin: 0 auto;
+    }
+}
+
+.main-page-hero__list {
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 32px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include min-width(768px) {
+        padding-bottom: 60px;
+    }
+}
+
+.main-page-hero__item {
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 14px;
+    box-shadow: (20px 20px 80px rgba(0, 0, 0, 0.3));
+    border-radius: 50%;
+
+    @include min-width-max-width(768px, 1439px) {
+        margin-right: 29px;
+    }
+
+    @include min-width(1440px) {
+        margin-right: 32px;
+    }
+}
+
+.main-page-hero__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.main-page-hero__picture {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main-page-hero__robot {
+    border-radius: 0 25% 0 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main-page-hero__lamp {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main-page-hero__scull {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0 25%;
+}
+
+.main-page-hero__text {
+    @include font(400, 16, 19);
+    text-align: center;
+    color: $main-color;
+    font-family: Caviar Dreams;
+    justify-content: center;
+
+    @include min-width-max-width(768px, 1439px) {
+        @include font(400, 24, 28);
+    }
+
+    @include min-width(1440px) {
+        @include font(400, 48, 56);
+    }
+}
