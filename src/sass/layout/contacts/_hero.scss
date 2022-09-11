@@ -1,36 +1,19 @@
 .emoji {
-    width: 22px;
+  width: 22px;
 }
 
 .emoji-flex {
-    display: flex;
-}
-
-.secondary-title {
-    color: #2B2B2B;
+  display: flex;
 }
 
 .hero-contacts__hero-title {
-    margin-bottom: 20px;
-    color: #487996;
-}
-
-.video-container {
-    padding: 20px 0px;
-    max-width: 336px;
-    max-height: 261px;
+  margin-bottom: 20px;
+  color: $accent-color;
 }
 
 .video-style {
-    border-radius: 15px;
-    float: left;
-    margin-right: 20px;
-    width: 100%;
-    height: 100%;
-}
+  border-radius: 15px;
 
-.hero-container {}
-
-.text-warp {
-    padding-left: 60px;
+  width: 280px;
+  height: 171px;
 }
