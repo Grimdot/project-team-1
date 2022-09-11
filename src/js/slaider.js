@@ -15,6 +15,7 @@ let pictureFull;
 for (const card of cards) {
     card.addEventListener("click", (Event) => {
         event.preventDefault();
+        document.body.style.overflow = 'hidden';
         cardIndex = cards.indexOf(card);
         pictureFull = picture[cardIndex].cloneNode();
         pictureFull.style.objectFit = "contain";
@@ -65,6 +66,7 @@ function changePicture(dir) {
 // Додає івент на кнопку закриття слайдеру
 sliderBtnClose.addEventListener("click", (Event) => {
     event.preventDefault();
+    document.body.style.overflow = 'visible';
     slider.classList.remove("more-photo__slider--open");
     pictureFull.remove();
     // newPictureFull.remove();
