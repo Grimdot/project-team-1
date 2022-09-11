@@ -128,6 +128,8 @@
   backdrop-filter: blur(4px);
 
   pointer-events: none;
+
+  transition: opacity $cubic;
 }
 
 .more-photo__slider--open {
@@ -143,9 +145,9 @@
   transform: translate(-50%, -50%);
   max-width: 236px;
 
-  // background-color: aqua;
-  // max-height: 50%;
   max-width: 50%;
+
+  transition: opacity $cubic;
 
   @include min-width($desktop) {
     max-width: 554px;
@@ -162,10 +164,14 @@
 .more-photo__btn-close {
   border: none;
   background-color: transparent;
-  // width: 45px;
-  // height: 45px;
+  width: 30px;
+  height: 100%;
   padding: 0;
   margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: absolute;
   top: 50%;
@@ -173,31 +179,38 @@
   color: #ffffff;
 
   cursor: pointer;
+
+  transform: color $cubic;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .more-photo__btn-left {
   transform: translate(-100%, -50%);
-  left: -10px;
+  left: 0;
 
-  @include min-width($desktop) {
-    left: -21px;
+  @include min-width($tablet) {
+    width: 68px;
   }
 
   @include min-width($desktop) {
-    left: -32px;
+    width: 106px;
   }
 }
 
 .more-photo__btn-right {
   transform: translate(+100%, -50%) rotate(180deg);
-  right: -10px;
+  right: 0;
 
-  @include min-width($desktop) {
-    right: -21px;
+  @include min-width($tablet) {
+    width: 68px;
   }
 
   @include min-width($desktop) {
-    right: -32px;
+    width: 106px;
   }
 }
 
@@ -217,14 +230,14 @@
   stroke: currentColor;
   fill: currentColor;
 
-  @include min-width($desktop) {
+  @include min-width($tablet) {
     width: 26px;
     height: 26px;
   }
 
   @include min-width($desktop) {
-    width: 42px;
-    height: 42px;
+    width: 23px;
+    height: 40px;
   }
 }
 
