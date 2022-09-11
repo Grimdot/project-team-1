@@ -17,3 +17,13 @@
   width: 280px;
   height: 171px;
 }
+
+.hero-wharp{
+          
+            gap: 30px;
+           
+          @include min-width($tablet){
+
+display: flex;
+          }
+        }

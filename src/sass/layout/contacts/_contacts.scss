@@ -8,6 +8,27 @@
     padding: 8px 0px;
    
 }
+
+.contact-left{
+gap: 30px;
+
+    @include min-width($tablet) {
+
+    display: flex;
+    }
+        @include min-width($desktop){
+    display: flex;
+        flex-direction: column;
+        }
+}
 .contacts-container{
-   
+gap: 30px;
+@include min-width($tablet){
+    display: flex;
+}
+@include min-width($desktop){
+display: flex;
+    flex-direction: column;
+        
+    }
 }
