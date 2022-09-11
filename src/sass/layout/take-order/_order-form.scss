@@ -42,6 +42,23 @@
   flex-direction: column;
   width: 100%;
   margin-top: 44px;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-top: 28px;
+  }
+
+  @include min-width(768px) {
+    &:first-of-type {
+      margin-top: 35px;
+    }
+  }
+
+  @include min-width(1440px) {
+    &:first-of-type {
+      margin-top: 44px;
+    }
+  }
 }
 
 .form-field_position {
@@ -58,14 +75,16 @@
 
 .form-field__title_position {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   font-weight: 400;
   text-transform: capitalize;
   transform-origin: 0 0;
   transition: transform $cubic;
+  pointer-events: none;
 
   .form-field__input:focus + &,
+  .form-field__input:hover + &,
   .form-field__input:not(:placeholder-shown) + & {
     transform: translateY(-100%) scale(0.87);
   }
@@ -73,7 +92,10 @@
 
 .form-field__input {
   border: 0;
+  padding-bottom: 4px;
   border-bottom: 1px solid $accent-color;
+  outline: transparent;
+  cursor: pointer;
 }
 
 // dropdown
@@ -185,7 +207,7 @@
   }
 
   &:hover {
-    outline: none;
+    outline: transparent;
   }
 
   &::placeholder {
@@ -199,11 +221,13 @@
   position: relative;
   width: 100%;
   padding-right: 16px;
-  text-align: justify;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-  @include min-width(1440px) {
+  @include min-width(480px) {
     padding-right: 0px;
+    text-align: start;
   }
 }
 
@@ -257,9 +281,14 @@
   padding: 0;
   margin-top: 40px;
   border-style: none;
+  outline: transparent;
 
   @include min-width(768px) {
     width: 177px;
     align-self: flex-end;
+  }
+
+  @include min-width(1440px) {
+    margin-top: 24px;
   }
 }

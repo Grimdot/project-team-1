@@ -104,9 +104,34 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 // Add file
-document
-  .querySelector('.add-file__input')
-  .addEventListener('click', function () {
-    document.querySelector('.add-file__title').innerText =
-      'Додані файли: ' + this.value;
+
+document.querySelector('.add-file__input').addEventListener('change', function (event) {
+  const addFileTitle = document.querySelector('.add-file__title');
+  const evenTarget = event.target.files;
+  const oneFile = addFileTitle.innerText =
+    'Додані файли: ' + evenTarget[0].name;
+  const secondFile = addFileTitle.innerText =
+      oneFile + '; ' + evenTarget[1].name;
+
+  if (evenTarget.length === 0) {
+    return
+  }
+  if (evenTarget.length === 1) {
+    oneFile 
+  }
+
+  if (evenTarget.length === 2) {
+    secondFile
+  }
+  
+  if (evenTarget.length === 3) {
+    addFileTitle.innerText =
+      secondFile + '; ' + evenTarget[2].name;
+  }
+
+  if (evenTarget.length > 3) {
+    addFileTitle.innerText = 'Нам достатньо трьох файлів :)';
+  }
+
   });
+
