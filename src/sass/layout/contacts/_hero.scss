@@ -13,17 +13,22 @@
 
 .video-style {
   border-radius: 15px;
-
   width: 280px;
-  height: 171px;
+    height: 171px;
+  @include min-width($tablet){
+    width: 280px;
+      height: 171px;
+  }
+
+  @include min-width($desktop){
+    width: 555px;
+      height: 313px;
+  }
 }
 
 .hero-wharp{
-          
             gap: 30px;
-           
           @include min-width($tablet){
-
 display: flex;
           }
         }
