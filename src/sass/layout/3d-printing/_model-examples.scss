@@ -1,0 +1,90 @@
+.model-examples {
+
+  &__title {
+  @include font(700, 16, 24);
+  color: $accent-color;
+  margin-bottom: 16px;
+  @include min-width($tablet) {
+    @include font(700, 36, 45);
+  }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+     row-gap: 20px;
+     @include min-width($tablet) {
+      gap: 32px;
+    }
+    }
+&__item {
+width:calc((100% - 16px) / 2) ;
+height: 158px;
+background: #FFFFFF;
+opacity: 0.8;
+box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #FFFFFF;
+border-radius: 50px 0px;
+@include min-width($tablet) {
+  width: 152px;
+  height: 182px;
+}  
+}
+        
+  &__img-1{
+    width: 90.48px;
+    height: 74.97px;
+    margin: auto;
+    padding:25.42px 22.88px 18.13px 16.64px ;
+    box-sizing: content-box;
+    @include min-width($tablet) {
+      width: 105.79px;
+      height: 86.56px;
+      margin: 0;
+      padding:30.03px 26.75px 19.67px 19.46px ;
+    }
+    }
+    &__img-2{
+      width: 100.88px;
+    height: 63.62px;
+    margin: auto;
+    padding:38.22px 11.96px 16.67px 17.16px ;
+    box-sizing: content-box;
+    @include min-width($tablet) {
+      width: 117.95px;
+      height: 73.29px;
+      margin: 0;
+      padding:44.02px 13.98px 19.2px 20.06px ;
+    }
+      } 
+        &__img-3{
+          width: 43.16px;
+          height: 70.52px;
+          margin: auto;
+          padding:31.32px 43.16px 16.16px 43.68px ;
+          box-sizing: content-box;
+          @include min-width($tablet) {
+            width: 50.46px;
+            height: 81.08px;
+            margin: 0;
+            padding:36.01px 50.46px 19.16px 51.07px ;
+          }
+    } 
+        &__img-4{
+          width: 83.72px;
+          height: 85.36px;
+          margin: auto;
+          padding:23.9px 23.4px 9.25px 22.88px ;
+          box-sizing: content-box;
+          @include min-width($tablet) {
+            width: 97.89px;
+            height: 98.14px;
+            margin: 0;
+            padding:27.48px 27.36px 10.63px 26.75px ;
+          }
+        } 
+    &__text {
+color: $accent-color;
+@include font(400, 14, 18);
+text-align: center;
+      }
+  }
