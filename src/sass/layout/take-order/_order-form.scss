@@ -1,3 +1,11 @@
+.section-feedback {
+  margin-bottom: 60px;
+
+  @include min-width($desktop) {
+    margin-bottom: 80px;
+  }
+}
+
 .order-form {
   width: 100%;
   height: 100%;
@@ -9,11 +17,11 @@
   justify-content: center;
   flex-direction: column;
 
-  @include min-width(480px) {
+  @include min-width($mobile) {
     width: 410px;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     width: 555px;
   }
 }
@@ -22,16 +30,16 @@
   text-transform: uppercase;
   @include font(700, 18, 23);
 
-  @include min-width(480px) {
+  @include min-width($mobile) {
     @include font(700, 18, 23);
   }
 
-  @include min-width(768px) {
+  @include min-width($tablet) {
     @include font(700, 24, 30);
     align-self: center;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(700, 36, 45);
     align-self: flex-start;
   }
@@ -51,7 +59,7 @@
 .form-field__title {
   font-weight: 400;
   text-transform: capitalize;
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(400, 18, 20);
   }
 }
@@ -100,7 +108,7 @@
   @include font(400, 16, 20);
   cursor: pointer;
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(400, 18, 20);
   }
 
@@ -180,7 +188,7 @@
   @include font(400, 16, 20);
   color: $main-color;
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(400, 18, 20);
   }
 
@@ -202,7 +210,7 @@
   text-align: justify;
   display: flex;
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     padding-right: 0px;
   }
 }
@@ -214,11 +222,11 @@
   cursor: pointer;
   transition: color $cubic;
 
-  @include min-width(480px) {
+  @include min-width($mobile) {
     width: 100%;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(400, 18, 20);
   }
 
@@ -258,7 +266,7 @@
   margin-top: 40px;
   border-style: none;
 
-  @include min-width(768px) {
+  @include min-width($tablet) {
     width: 177px;
     align-self: flex-end;
   }
