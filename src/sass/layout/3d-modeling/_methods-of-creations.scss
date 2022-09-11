@@ -1,0 +1,121 @@
+.modeling-metods{
+    padding-top: 40px;
+    @include miw(1440px){
+        padding-top: 100px;
+    }
+}
+
+.modeling-metods > .container{
+    @include miw(1440px){
+        padding: 0px 149px;
+    }
+
+} 
+
+.modeling-metods__conteiner{
+    position: relative;
+
+}
+.modeling-metods__subtitle{
+    @include font(700, 18, 23);
+    color:$accent-color;
+    @include miw(768px){
+        @include font(700, 24, 30);
+    }
+    @include miw(1440px){
+        @include font(700, 36, 45);
+
+    }
+    
+    
+
+}
+.modeling-metods__list{
+    margin-top: 16px;
+    @include miw(1440px){
+        margin-top: 24px;}
+}
+
+.modeling-metods__item{
+    @include font(300, 16, 20);
+    color:$main-color;
+    @include miw(1440px){
+        @include font(300, 18, 23);
+
+    }
+}
+
+.modeling-metods__item:not(:first-child){
+    margin-top: 16px;
+}
+
+
+
+.modeling-metods__item::before{
+    display: inline-block;
+    content: " ";
+    background-color: #487996;
+    width: 7px;
+    height: 7px;
+    border-radius: 3px 0px;
+    margin-right: 8px;
+
+    @include miw(768px){
+        margin-right: 10px;
+    }
+
+    @include miw(1440px){
+        width: 8px;
+        height: 8px;
+        margin-right: 9px;
+    }
+}
+
+
+
+
+.modeling-metods__bg-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 280px;
+    height: 164px;
+    background-repeat: no-repeat;
+    background-image: url(../images/3d-modeling/methods-img-mobile@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/3d-modeling/methods-img-mobile@2x.jpg);
+        }
+
+    @include miw(768px){
+         background-image: url(../images/3d-modeling/methods-img-tablet@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/3d-modeling/methods-img-tablet@2x.jpg);
+            }
+        position: absolute;
+        right: 35px;
+        top: 30px;
+        width: 246px;
+        height: 144px;
+        margin-top: 0;
+    }
+    
+    @include miw(1440px){
+        background-image: url(../images/3d-modeling/methods-img@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/3d-modeling/methods-img@2x.jpg);
+        }
+        right: 149px;
+        top: -60px;
+
+        width: 555px;
+        height: 301px;
+    }
+
+}
