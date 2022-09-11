@@ -1,0 +1,106 @@
+.modeling-metods {
+  padding-top: 40px;
+
+  @include min-width($desktop) {
+    padding-top: 100px;
+  }
+}
+
+.modeling-metods__list {
+  margin-top: 16px;
+  @include min-width($tablet) {
+    margin-top: 24px;
+  }
+}
+
+.modeling-metods__item {
+  @include font(300, 16, 20);
+
+  @include min-width($desktop) {
+    @include font(300, 16, 20);
+  }
+  @include min-width($desktop) {
+    @include font(300, 18, 23);
+  }
+}
+
+.modeling-metods__item:not(:first-child) {
+  margin-top: 16px;
+}
+
+.modeling-metods__item::before {
+  display: inline-block;
+  content: ' ';
+  background-color: #487996;
+  width: 7px;
+  height: 7px;
+  border-radius: 3px 0px;
+  margin-right: 8px;
+
+  @include min-width($tablet) {
+    margin-right: 10px;
+  }
+
+  @include min-width($tablet) {
+    width: 8px;
+    height: 8px;
+    margin-right: 9px;
+  }
+}
+
+.modeling-metods__bg-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 280px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-image: url(../images/3d-modeling/methods-img-mobile@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/3d-modeling/methods-img-mobile@2x.png);
+    background-size: contain;
+  }
+
+  @include min-width($tablet) {
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    margin-top: 0;
+
+    background-image: url(../images/3d-modeling/methods-img-tablet@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/methods-img-tablet@2x.png);
+
+      background-size: contain;
+    }
+  }
+
+  @include min-width($desktop) {
+    background-image: url(../images/3d-modeling/methods-img@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/methods-img@2x.png);
+      background-size: contain;
+    }
+
+    right: 250px;
+    top: -60px;
+
+    width: 555px;
+    height: 301px;
+  }
+}
+
+.modeling-metods__conteiner {
+  position: relative;
+  @include min-width($desktop) {
+    margin-left: 117px;
+  }
+}

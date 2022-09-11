@@ -1,0 +1,50 @@
+.modeling-hero {
+  padding-top: 40px;
+  @include min-width($desktop) {
+    padding-top: 100px;
+  }
+}
+
+.modeling-metods__conteiner {
+  @include min-width($desktop) {
+    position: relative;
+  }
+}
+
+.modeling-hero__list {
+  margin-top: 16px;
+  @include min-width-max-width($tablet, $desktop) {
+    max-width: 515px;
+    margin-right: auto;
+  }
+  @include min-width($desktop) {
+    margin-top: 24px;
+    display: flex;
+    gap: 72;
+  }
+}
+.modeling-hero__item {
+  @include min-width($desktop) {
+    max-width: 515px;
+  }
+}
+
+.modeling-hero__item:last-child {
+  margin-top: 16px;
+  @include min-width($desktop) {
+    margin-top: 0;
+  }
+}
+
+.modeling-hero__text {
+  @include min-width($desktop) {
+    @include font(300, 18, 23);
+    max-width: 515px;
+  }
+}
+
+.hero-wrap {
+  @include min-width($desktop) {
+    margin-left: 117px;
+  }
+}

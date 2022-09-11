@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Cera Pro', sans-serif;
-  font-size: 16px;
+  @include font(300, 16, 20);
   background-color: $background-color;
   color: $main-color;
 }
@@ -13,27 +13,59 @@ a {
 
 .section {
   padding-top: 40px;
-
-  @include miw(768px) {
+  max-width: 1440px;
+  margin: 0 auto;
+  @include min-width($tablet) {
     padding-top: 60px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     padding-top: 120px;
   }
 }
 
 .hero-title {
   color: $accent-color;
-  @include font(700, 48, 60);
+
+  @include font(700, 24, 30);
+
+  @include min-width($tablet) {
+    @include font(700, 36, 45);
+  }
+  @include min-width($desktop) {
+    @include font(700, 48, 60);
+  }
 }
 
 .section-title {
   color: $accent-color;
-  @include font(700, 36, 45);
+
+  @include font(700, 18, 23);
+
+  @include min-width($tablet) {
+    @include font(700, 24, 30);
+  }
+  @include min-width($desktop) {
+    @include font(700, 36, 45);
+  }
 }
 
 .secondary-title {
   color: $accent-color;
-  @include font(300, 18, 23);
+
+  @include font(300, 16, 20);
+
+  @include min-width($desktop) {
+    @include font(300, 18, 23);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 999;
+}
+
+.header {
+  position: relative;
+  z-index: 999;
 }
