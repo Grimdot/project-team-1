@@ -1,5 +1,8 @@
 .scan-process {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  @include min-width($desktop) {
+    padding-bottom: 80px;
+  }
 }
 
 .scan-process__section-title {
@@ -22,19 +25,28 @@
   gap: 32px;
   @include max-width(767px) {
     gap: 16px 20px;
+    margin-bottom: 40px;
+  }
+
+  @include min-width($tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include min-width($desktop) {
+    margin-bottom: 80px;
   }
 }
 
 .scan-process-list__item {
   width: 130px;
   height: 182px;
-  padding: 15px 19px;
+  padding: 14px 17px;
   flex-basis: calc((100% - 20px) / 2);
 
   @include min-width($tablet) {
     width: 152px;
     height: 210px;
-    padding: 20px 23px;
+    padding: 26px 23px;
     flex-basis: calc((100% - 96px) / 4);
   }
 
@@ -49,29 +61,29 @@
   box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8),
     inset -1px -1px 16px #ffffff;
   border-radius: 50px 0px;
-}
 
-.scan-process-list__item::before {
-  content: '';
-  display: block;
-  margin-bottom: 16px;
-  width: 91px;
-  height: 81px;
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 91px;
+    height: 81px;
 
-  @include min-width($tablet) {
-    width: 106px;
-    height: 95px;
+    @include min-width($tablet) {
+      width: 106px;
+      height: 95px;
+    }
+
+    @include min-width($desktop) {
+      margin-bottom: 4px;
+      width: 240px;
+      height: 240px;
+    }
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-
-  @include min-width($desktop) {
-    margin-bottom: 4px;
-    width: 240px;
-    height: 240px;
-  }
-
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .scan-process-list__item--prepare::before {
@@ -191,4 +203,8 @@
   }
 
   color: $accent-color;
+}
+
+.scan-process-list__subtitle--indent {
+  display: block;
 }
