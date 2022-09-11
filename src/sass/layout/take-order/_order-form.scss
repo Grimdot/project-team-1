@@ -256,31 +256,10 @@
   height: 56px;
   padding: 0;
   margin-top: 40px;
-  cursor: pointer;
-
-  transition: color $cubic, background-color $cubic;
+  border-style: none;
 
   @include min-width(768px) {
     width: 177px;
     align-self: flex-end;
-  }
-
-  @include font(700, 16, 24);
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: $accent-color;
-  background-color: $secondary-background-color;
-  box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px rgba(72, 121, 150, 0.1),
-    5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px #ffffff;
-  border-radius: 30.5px;
-  border-style: none;
-
-  &:hover,
-  &:focus {
-    color: $background-color;
-    background-color: $accent-color;
-    outline: none;
   }
 }

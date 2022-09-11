@@ -2,10 +2,8 @@
   width: 280px;
   height: 56px;
 
-  font-family: 'Cera Pro';
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: inherit;
+  @include font(700, 16, 24);
 
   text-align: center;
   letter-spacing: 0.1em;
