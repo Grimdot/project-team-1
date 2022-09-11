@@ -1,0 +1,55 @@
+<section class="section-feedback section">
+  <div class="container">
+    <form name="order-form" class="order-form" autocomplete="off">
+      <h2 class="order-form__title section-title">Зв'яжіться з нами</h2>
+      <label class="form-field form-field_position">
+        <input
+          class="form-field__input"
+          name="username"
+          type="text"
+          autocomplete="name"
+          placeholder=" "
+          required
+        />
+        <span class="form-field__title form-field__title_position">Ім'я</span>
+      </label>
+      <label class="form-field form-field_position">
+        <input
+          class="form-field__input"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder=" "
+          required
+        />
+        <span class="form-field__title form-field__title_position">Email</span>
+      </label>
+      <label class="form-field form-field_position"
+        ><span class="form-field__title">Повідомлення</span>
+        <textarea
+          class="form-field__textarea"
+          name="usercomment"
+          rows="8"
+          placeholder="Залишіть своє повідомлення"
+        ></textarea>
+      </label>
+      <label class="add-file">
+        <span class="add-file__icon">
+          <svg width="23.71" height="20">
+            <use href="/src/images/icons.svg#icon-paper-clip"></use>
+          </svg>
+        </span>
+        <input
+          class="add-file__input visually-hidden"
+          type="file"
+          accept="image/*, .STL, .Obj, .CAD"
+          multiple
+        />
+        <span class="add-file__title"
+          >*Прикріпіть зображення / креслення / STL / Obj / CAD-модель</span
+        >
+      </label>
+      <button type="submit" class="form-button btn">Відправити</button>
+    </form>
+  </div>
+</section>

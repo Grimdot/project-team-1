@@ -13,12 +13,13 @@ a {
 
 .section {
   padding-top: 40px;
-
-  @include miw(768px) {
+  max-width: 1440px;
+  margin: 0 auto;
+  @include min-width($tablet) {
     padding-top: 60px;
   }
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     padding-top: 120px;
   }
 }
@@ -28,10 +29,10 @@ a {
 
   @include font(700, 24, 30);
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     @include font(700, 36, 45);
   }
-  @include miw(1440px) {
+  @include min-width($desktop) {
     @include font(700, 48, 60);
   }
 }
@@ -41,10 +42,10 @@ a {
 
   @include font(700, 18, 23);
 
-  @include miw(768px) {
+  @include min-width($tablet) {
     @include font(700, 24, 30);
   }
-  @include miw(1440px) {
+  @include min-width($desktop) {
     @include font(700, 36, 45);
   }
 }
@@ -54,7 +55,17 @@ a {
 
   @include font(300, 16, 20);
 
-  @include miw(1440px) {
+  @include min-width($desktop) {
     @include font(300, 18, 23);
   }
+}
+
+main {
+  position: relative;
+  z-index: 999;
+}
+
+.header {
+  position: relative;
+  z-index: 999;
 }

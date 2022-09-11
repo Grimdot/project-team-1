@@ -1,0 +1,54 @@
+.btn {
+  width: 280px;
+  height: 56px;
+
+  font-family: inherit;
+  @include font(700, 16, 24);
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: $accent-color;
+
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background: $secondary-background-color;
+  box-shadow: -10px -10px 20px $background-color,
+    10px 10px 20px rgba(72, 121, 150, 0.1),
+    5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px $background-color;
+  border-radius: 30.5px;
+
+  cursor: pointer;
+
+  transition: color background $cubic;
+
+  &:hover,
+  &:focus {
+    color: $background-color;
+    background: $accent-color;
+  }
+
+  @include min-width($tablet) {
+    width: 277px;
+    height: 56px;
+  }
+}
+
+.order-form-button {
+  text-align: center;
+
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+  @include min-width($tablet) {
+    margin-top: 60px;
+  }
+
+  @include min-width($desktop) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,194 @@
+.bg-img {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-img-mob {
+  @include max-width($tablet) {
+    max-width: 480px;
+    background-image: url(../images/mobile-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/mobile-bg@2x.png);
+      max-width: 480px;
+    }
+  }
+}
+
+// Main page background
+
+.bg-img-main {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1608px;
+    background-image: url(../images/main/main-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/main/main-tablet-bg@2x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 3097px;
+    background-image: url(../images/main/main-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/main/main-bg@2x.png);
+    }
+  }
+}
+
+// 3d modeling page background
+
+.bg-img-3d-mod {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1318px;
+    background-image: url(../images/3d-modeling/3d-modeling-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/3d-modeling-tablet-bg@2x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1727px;
+    background-image: url(../images/3d-modeling/3d-modeling-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/3d-modeling-bg@2x.png);
+    }
+  }
+}
+
+// 3d scanning page background
+
+.bg-img-3d-scan {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1249px;
+    background-image: url(../images/3d-scanning/3d-scanning-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-scanning/3d-scanning-tablet-bg@1x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1596px;
+    background-image: url(../images/3d-scanning/3d-scanning-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-scanning/3d-scanning-bg@1x.png);
+    }
+  }
+}
+
+// 3d printing page background
+
+.bg-img-3d-print {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/3d-printing/3d-printing-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-printing/3d-printing-tablet-bg@2x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 2248px;
+    background-image: url(../images/3d-printing/3d-printing-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-printing/3d-printing-bg@2x.png);
+    }
+  }
+}
+
+// Take order page background
+
+.bg-img-take-order {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/take-order/take-order-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/take-order/take-order-tablet-bg@2x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1850px;
+    background-image: url(../images/take-order/take-order-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/take-order/take-order-bg@2x.png);
+    }
+  }
+}
+
+// Contacts page background
+
+.bg-img-contacts {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/contact/contact-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contact/contact-tablet-bg@2x.png);
+    }
+  }
+
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1561px;
+    background-image: url(../images/contact/contact-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contact/contact-bg@2x.png);
+    }
+  }
+}

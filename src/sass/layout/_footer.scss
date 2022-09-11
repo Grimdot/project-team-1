@@ -1,0 +1,159 @@
+.footer {
+  position: relative;
+
+  z-index: 999;
+
+  display: flex;
+  background-color: $secondary-background-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 400px;
+  @include min-width($desktop) {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer__container {
+  @include max-width($tablet) {
+    text-align: center;
+    width: 100%;
+  }
+
+  @include min-width($desktop) {
+    display: flex;
+  }
+}
+
+.footer__logo {
+  @include min-width-max-width($tablet, $desktop) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 277px;
+  }
+}
+
+.footer__logo-img {
+  display: inline-block;
+  width: 192px;
+  height: 48px;
+}
+
+.footer__info {
+  @include min-width($tablet) {
+    display: flex;
+  }
+}
+
+.footer__menu {
+  @include max-width($tablet) {
+    margin-top: 19px;
+  }
+
+  @include min-width($tablet) {
+    margin-right: 52px;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 103px;
+  }
+}
+
+.footer__menu-link {
+  color: $main-color;
+
+  @include min-width($desktop) {
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.footer__menu-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer__socials {
+  @include max-width($tablet) {
+    margin-top: 24px;
+  }
+
+  @include min-width-max-width($tablet, $desktop) {
+    margin-right: auto;
+  }
+
+  @include min-width($desktop) {
+    margin-right: 161px;
+  }
+}
+
+.footer__socials-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer__socials-link {
+  color: $main-color;
+
+  @include min-width($desktop) {
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.footer__contacts {
+  @include max-width($tablet) {
+    margin-top: 24px;
+  }
+
+  @include min-width-max-width($tablet, $desktop) {
+    text-align: end;
+  }
+}
+
+.footer__contacts-mail-wrap {
+  @include max-width($tablet) {
+    margin-bottom: 24px;
+  }
+
+  @include min-width($tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.footer__contacts-mail {
+  font-style: normal;
+}
+
+.footer__contacts-mail-list {
+  margin-top: 8px;
+}
+
+.footer__contacts-mail-link {
+  font-style: normal;
+  color: $accent-color;
+}
+
+.footer__contacts-tel {
+  font-style: normal;
+}
+
+.footer__contacts-tel-item {
+  margin-top: 8px;
+}
+
+.footer__contacts-tel-link {
+  font-style: normal;
+  color: $accent-color;
+}
