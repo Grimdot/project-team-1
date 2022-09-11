@@ -56,13 +56,13 @@
     margin-top: 28px;
   }
 
-  @include min-width(768px) {
+  @include min-width($tablet) {
     &:first-of-type {
       margin-top: 35px;
     }
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     &:first-of-type {
       margin-top: 44px;
     }
@@ -233,9 +233,7 @@
   align-items: center;
   justify-content: flex-start;
 
-
   @include min-width($mobile) {
-
     padding-right: 0px;
     text-align: start;
   }
@@ -298,7 +296,7 @@
     align-self: flex-end;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     margin-top: 24px;
   }
 }
