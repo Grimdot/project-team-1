@@ -251,7 +251,18 @@
   background-color: transparent;
   padding: 0;
 
-  color: #487996;
+  color: $accent-color;
 
   cursor: pointer;
+
+  transform: color $cubic;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+
+  @include min-width-max-width($tablet, $desktop){
+    visibility: hidden;
+  }
 }
