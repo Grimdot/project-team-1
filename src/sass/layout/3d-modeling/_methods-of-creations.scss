@@ -56,34 +56,38 @@
   width: 280px;
   height: 164px;
   background-repeat: no-repeat;
-  background-image: url(../images/3d-modeling/methods-img-mobile@1x.jpg);
+  background-image: url(../images/3d-modeling/methods-img-mobile@1x.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/3d-modeling/methods-img-mobile@2x.jpg);
+    background-image: url(../images/3d-modeling/methods-img-mobile@2x.png);
+    background-size: contain;
   }
 
   @include min-width($tablet) {
-    background-image: url(../images/3d-modeling/methods-img-tablet@1x.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/3d-modeling/methods-img-tablet@2x.jpg);
-    }
     position: absolute;
     top: 70px;
     right: 0;
-    width: 246px;
-    height: 144px;
-    margin-top: 0;
-  }
 
-  @include min-width($desktop) {
-    background-image: url(../images/3d-modeling/methods-img@1x.jpg);
+    margin-top: 0;
+
+    background-image: url(../images/3d-modeling/methods-img-tablet@1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/3d-modeling/methods-img@2x.jpg);
+      background-image: url(../images/3d-modeling/methods-img-tablet@2x.png);
+
+      background-size: contain;
+    }
+  }
+
+  @include min-width($desktop) {
+    background-image: url(../images/3d-modeling/methods-img@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/methods-img@2x.png);
+      background-size: contain;
     }
 
     right: 250px;
