@@ -52,15 +52,6 @@
     max-width: 704px;
     gap: 32px;
     margin-bottom: 12px;
-
-    //додаю Masonry Layout
-    // display: grid;
-    // grid-gap: 32px;
-
-    // // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    // grid-template-columns: repeat(auto-fit, minmax(115.2px, 1fr));
-    // grid-auto-rows: 180px 180px 152px 180px;
-    // grid-auto-flow: dense;
   }
 
   @include min-width($desktop) {
@@ -69,7 +60,7 @@
     //додаю Masonry Layout
     display: grid;
     grid-gap: 32px;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
     grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
     grid-auto-rows: 278px 278px 203px 278px;
     grid-auto-flow: dense;
@@ -92,12 +83,6 @@
 }
 
 .more-photo__list--show {
-  // & .more-photo__item {
-  //   &:nth-child(n + 4) {
-  //     display: none;
-  //   }
-  // }
-
   & .more-photo__item {
     @include max-width($tablet) {
       &:nth-child(n + 4) {
@@ -116,145 +101,6 @@
 
   height: 100%;
   object-fit: cover;
-}
-
-// стилі для слайдеру
-.more-photo__slider {
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  overflow: scroll;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(43, 43, 43, 0.8);
-  backdrop-filter: blur(4px);
-
-  pointer-events: none;
-
-  transition: opacity $cubic;
-}
-
-.more-photo__slider--open {
-  opacity: 1;
-
-  pointer-events: all;
-}
-
-.more-photo__slider-ing {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 236px;
-
-  // max-width: 50%;
-
-  transition: opacity $cubic;
-
-  @include min-width($tablet) {
-    max-width: 554px;
-  }
-
-  @include min-width($desktop) {
-    max-width: 906px;
-  }
-}
-
-//стилі кнопок управління слайдером
-.more-photo__btn-left,
-.more-photo__btn-right,
-.more-photo__btn-close {
-  border: none;
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  margin: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-  top: 50%;
-
-  color: #ffffff;
-
-  cursor: pointer;
-
-  transform: color $cubic;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-
-  @include min-width($tablet) {
-    width: 68px;
-    height: 68px;
-  }
-
-  @include min-width($desktop) {
-    width: 106px;
-    height: 106px;
-  }
-}
-
-.more-photo__btn-left {
-  transform: translate(-100%, -50%);
-  left: 0;
-
-  // @include min-width($tablet) {
-  //   width: 68px;
-  // }
-
-  // @include min-width($desktop) {
-  //   width: 106px;
-  // }
-}
-
-.more-photo__btn-right {
-  transform: translate(+100%, -50%) rotate(180deg);
-  right: 0;
-
-  // @include min-width($tablet) {
-  //   width: 68px;
-  // }
-
-  // @include min-width($desktop) {
-  //   width: 106px;
-  // }
-}
-
-.more-photo__btn-close {
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-}
-
-// силі для іконки завантаження
-.more-photo__icon {
-  display: block;
-  margin: 0;
-
-  stroke: currentColor;
-  fill: currentColor;
-
-  @include min-width($tablet) {
-    width: 26px;
-    height: 26px;
-  }
-
-  @include min-width($desktop) {
-    width: 23px;
-    height: 40px;
-  }
 }
 
 // стилі для кнопки яка відкриває всю галерею
@@ -309,28 +155,7 @@
   pointer-events: all;
 }
 
-.slider__list {
-  position: relative;
-  display: flex;
-  justify-self: center;
-  align-items: center;
-  width: calc(100% * 12);
-
-  left: 0;
-
-  // transition: left $cubic;
-}
-
-.slider__item {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-
-  transition: opacity $cubic;
-}
-
-.slider-ing {
+.slider__section {
   position: relative;
   top: 50%;
   left: 50%;
@@ -348,6 +173,102 @@
   }
 }
 
-.slider__box {
+.slider__container {
   overflow: hidden;
+}
+
+.slider__list {
+  position: relative;
+  left: 0;
+
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: calc(100% * 12);
+}
+
+.slider__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+
+  transition: opacity $cubic;
+}
+
+//стилі кнопок управління слайдером
+.slider__btn-left,
+.slider__btn-right,
+.slider__btn-close {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transform: color $cubic;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include min-width($tablet) {
+    width: 68px;
+    height: 68px;
+  }
+
+  @include min-width($desktop) {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.slider__btn-left {
+  transform: translate(-100%, -50%);
+  left: 0;
+}
+
+.slider__btn-right {
+  transform: translate(+100%, -50%) rotate(180deg);
+  right: 0;
+}
+
+.slider__btn-close {
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+// силі для іконки завантаження
+.slider__icon {
+  display: block;
+  margin: 0;
+
+  stroke: currentColor;
+  fill: currentColor;
+
+  @include min-width($tablet) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @include min-width($desktop) {
+    width: 23px;
+    height: 40px;
+  }
 }
