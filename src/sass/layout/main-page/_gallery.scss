@@ -1,24 +1,24 @@
 .main-page-gallery {
-  @include max-width(767px) {
+  @include max-width($tablet) {
     width: 320px;
   }
 }
 .main-page-gallery__container {
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     width: 1206px;
   }
 }
 .main-page-gallery__title {
-  @include max-width(767px) {
+  @include max-width($tablet) {
     @include font(700, 24, 30);
     padding-bottom: 16px;
   }
 
-  @include min-width-max-width(768px, 1439px) {
+  @include min-width-max-width($tablet, $desktop) {
     padding-bottom: 32px;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     @include font(700, 48, 60);
     padding-bottom: 62px;
   }
@@ -27,68 +27,50 @@
 .main-page-gallery__list {
   list-style: none;
   text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
+
   // max-width: 1142px;
   // margin-left: auto;
   // margin-right: auto;
-  @include min-width-max-width(768px, 1439px) {
-    max-width: 704px;
-    gap: 32px;
+  @include min-width($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 32px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include min-width($desktop) {
+    column-gap: 32px;
+    row-gap: 40px;
   }
 }
 
 .main-page-gallery__item {
-  margin-bottom: 15px;
-  // min-width: 280px;
-  // width: 100%;
-
-  @include min-width-max-width(768px, 1439px) {
-    width: calc((100% - 62px) / 2);
-    // margin-right: 32px;
-    margin: 0;
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
+  @include max-width($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 24px;
     }
   }
-
-  @include min-width(1440px) {
-    width: calc((100% - 2 * 32px) / 2);
-    margin-right: 30px;
-    margin-bottom: 40px;
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-    }
+  @include min-width($tablet) {
+    width: 336px;
   }
-}
-
-.main-page-gallery__item:nth-child(4n) {
-  margin-bottom: 0;
+  @include min-width($desktop) {
+    width: 555px;
+  }
 }
 
 .main-page-gallery__title-small {
-  @include max-width(1439px) {
+  @include max-width($desktop) {
     @include font(300, 16, 20);
     margin-top: 8px;
   }
 
-  @include min-width-max-width(768px, 1439px) {
+  @include min-width-max-width($tablet, $desktop) {
     margin-top: 16px;
   }
 
-  @include min-width(1440px) {
+  @include min-width($desktop) {
     margin-top: 16px;
   }
 }
