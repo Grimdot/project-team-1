@@ -1,0 +1,185 @@
+//   -------------------------------------------contacts----------------------------------------------------------------------------------
+
+.order-contacts {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding-top: 120px;
+        padding-right: 149px;
+        margin: 0;
+
+    }
+
+        .order-contacts__list {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            @media screen and (min-width: 1440px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                padding-bottom: 451px;
+            }
+        }
+}
+
+.order-contacts__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.27;
+    color: $accent-color;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1440px) {
+        font-size: 36px;
+        line-height: 1.25;
+        margin-bottom: 18px;
+        text-align: right;
+    }
+}
+
+.order-contacts__title--uppercased {
+    text-transform: uppercase;
+}
+
+.info-tel {
+    @media screen and (min-width: 1440px) {
+        text-align: end;
+    }
+}
+
+.info--margin, .order-contacts__item:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.info-tel__item, .info-time__item{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $main-color;
+
+
+    @media screen and (min-width: 1440px) {
+        font-size: 18px;
+        line-height: 1.1;
+        text-align: end;
+    }
+
+}
+
+.info-tel__item:first-child, .info-time__item:first-child {
+    @media screen and (min-width: 1440px) {
+        margin-bottom: 18px;
+    }
+}
+
+// ------------------------------------------mosaic-------------------------------------------------------------------------------------
+
+.order-contacts__wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.order-contacts__mosaic {
+    
+    
+    @media screen and (max-width: 1439px) {
+        display: none;
+    }
+}
+
+.order-contacts__mosaic--top{
+    
+    display: flex;
+
+    .order-contacts__mosaic--rectangled:first-child {
+            position: absolute;
+            bottom: 245px;
+            right: 449px;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: left top;
+            border-top-right-radius: 50%;
+            margin: 0px;
+           
+        }
+    
+        .order-contacts__mosaic--rectangled:nth-child(2) {
+            position: absolute;
+            bottom: 233px;
+            right: 298px;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: center top;
+            border-bottom-left-radius: 50%;
+
+        }
+    
+        .order-contacts__mosaic--rectangled:nth-child(3) {
+            position: absolute;
+            bottom: 245px;
+            right: 149px;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: right top;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+
+        }
+}
+
+.order-contacts__mosaic--bottom{
+
+    display: flex;
+
+    .order-contacts__mosaic--rectangled:first-child {
+            position: absolute;
+            bottom: 96px;
+            right: 447px;;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: left bottom;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+    
+        .order-contacts__mosaic--rectangled:nth-child(2) {
+            position: absolute;
+            bottom: 89px;
+            right: 304px;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: center bottom;
+            border-radius: 50%;
+        }
+    
+        .order-contacts__mosaic--rectangled:nth-child(3) {
+            position: absolute;
+            bottom: 95px;
+            right: 160px;
+            width: 138px;
+            height: 138px;
+            background-image: url(../images/mosaic.jpg);
+            background-position: right bottom;
+            border-bottom-right-radius: 50%;
+        }
+}
+
+
