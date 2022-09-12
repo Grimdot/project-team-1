@@ -1,0 +1,137 @@
+.images-style {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.order-header__block {
+  position: relative;
+
+  @include min-width($tablet) {
+    align-items: flex-start;
+  }
+
+  @include min-width($desktop) {
+    padding-left: 117px;
+  }
+}
+
+.order-title {
+  margin-bottom: 16px;
+
+  @include min-width($desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.one-paragraph {
+  margin-bottom: 16px;
+
+  @include min-width($tablet) {
+    margin-bottom: 0;
+  }
+  @include min-width($desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.header-text__item {
+  display: block;
+  @include max-width($tablet) {
+    max-width: 425px;
+    margin-left: auto;
+  }
+  @include min-width($tablet) {
+    max-width: 336px;
+  }
+  @include min-width($desktop) {
+    max-width: 500px;
+  }
+}
+
+.take-order-img {
+  margin: 0 auto;
+
+  @include max-width($tablet) {
+    max-width: 480px;
+    max-height: auto;
+    margin-bottom: 16px;
+  }
+  @include min-width($tablet) {
+    width: 336px;
+    height: 158px;
+  }
+  @include min-width($desktop) {
+    width: 555px;
+    height: 400px;
+  }
+}
+
+.take-order__content-wrap {
+  @include min-width($tablet) {
+    display: flex;
+    align-items: center;
+  }
+  @include min-width($desktop) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.header-text__list {
+  @include min-width($tablet) {
+    margin-left: 32px;
+  }
+}
+
+.bg-img-wrap {
+  display: none;
+
+  @include min-width($desktop) {
+    position: absolute;
+    display: flex;
+    top: 260px;
+    right: 64px;
+  }
+}
+
+.take-order-bg-img {
+  width: 203px;
+  height: 203px;
+  background-size: contain;
+  margin-right: 32px;
+  filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
+}
+
+.bg-img-1 {
+  border-radius: 0px 72px 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-1@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-1@2x.jpg');
+  }
+}
+
+.bg-img-2 {
+  border-radius: 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-2@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-2@2x.jpg');
+  }
+}
+
+.bg-img-3 {
+  border-radius: 0px 0px 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-3@1x.jpg');
+  margin-right: 0;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-3@2x.jpg');
+  }
+}

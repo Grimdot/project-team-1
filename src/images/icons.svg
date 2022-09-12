@@ -28,4 +28,9 @@
 <symbol id="icon-slider-arrow" viewBox="0 0 18 32">
 <path d="M18.4 2.144l-14.087 13.856 14.087 13.856-2.176 2.144-16.224-16.008 16.224-15.992 2.176 2.144z"></path>
 </symbol>
+
+
+<symbol id="icon-test" viewBox="0 0 107 32">
+<path d="M53.333 0l46.188 32h-92.376l46.188-32z"></path>
+</symbol>
 </svg>

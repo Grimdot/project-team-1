@@ -1,586 +1,194 @@
-.rectangle-wrap {
+.bg-img {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: 0;
   position: absolute;
-  height: 100%;
-
   top: 0;
   left: 50%;
-
-  transform: translateX(-50%);
-
-  overflow: hidden;
-  pointer-events: none;
+  transform: translatex(-50%);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.rectangle {
-  position: absolute;
-  width: 74px;
-  height: 74px;
+.bg-img-mob {
+  @include max-width($tablet) {
+    max-width: 480px;
+    height: 1526px;
+    background-image: url(../images/mobile-bg@1x.png);
 
-  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
-  z-index: 0;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/mobile-bg@2x.png);
+    }
+  }
+}
+
+// Main page background
+
+.bg-img-main {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1608px;
+    background-image: url(../images/main/main-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/main/main-tablet-bg@2x.png);
+    }
+  }
 
   @include min-width($desktop) {
-    width: 144px;
-    height: 144px;
+    width: 1440px;
+    height: 3097px;
+    background-image: url(../images/main/main-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/main/main-bg@2x.png);
+    }
   }
 }
 
-.sphere {
-  border-radius: 72px;
-}
+// 3d modeling page background
 
-.corner-radius {
-  border-radius: 35px 0px 0px 0px;
+.bg-img-3d-mod {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1318px;
+    background-image: url(../images/3d-modeling/3d-modeling-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/3d-modeling-tablet-bg@2x.png);
+    }
+  }
 
   @include min-width($desktop) {
-    border-radius: 72px 0px 0px 0px;
+    width: 1440px;
+    height: 1727px;
+    background-image: url(../images/3d-modeling/3d-modeling-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-modeling/3d-modeling-bg@2x.png);
+    }
   }
 }
 
-.opposite-corner-radius {
-  border-radius: 25px 0px;
+// 3d scanning page background
+
+.bg-img-3d-scan {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1249px;
+    background-image: url(../images/3d-scanning/3d-scanning-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-scanning/3d-scanning-tablet-bg@2x.png);
+    }
+  }
 
   @include min-width($desktop) {
-    border-radius: 72px 0px;
+    width: 1440px;
+    height: 1596px;
+    background-image: url(../images/3d-scanning/3d-scanning-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-scanning/3d-scanning-bg@2x.png);
+    }
   }
 }
 
-.semi-sphere {
-  border-radius: 35px 0px 0px 35px;
+// 3d printing page background
+
+.bg-img-3d-print {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/3d-printing/3d-printing-tablet-bg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/3d-printing/3d-printing-tablet-bg@2x.png);
+    }
+  }
 
   @include min-width($desktop) {
-    border-radius: 72px 0px 0px 72px;
-  }
-}
-
-.triangle {
-  border-radius: 0px 0px 72px 0px;
-}
-
-// Styles for mobile
-
-@include max-width($tablet) {
-  .hidden-rec,
-  .secondary-rec {
-    display: none;
-  }
-
-  .rec-1 {
-    top: 0;
-    left: 0;
-    rotate: 180deg;
-  }
-
-  .rec-2 {
-    top: 0;
-    right: 0;
-  }
-
-  .rec-3 {
-    top: 295px;
-    left: -29px;
-    rotate: 180deg;
-  }
-
-  .rec-4 {
-    top: 581px;
-    right: -15px;
-  }
-
-  .rec-5 {
-    top: 643px;
-    left: -17px;
-  }
-
-  .rec-6 {
-    top: 1025px;
-    right: -21px;
-    rotate: 180deg;
-  }
-
-  .rec-7 {
-    top: 1062px;
-    left: -18px;
-    rotate: 180deg;
-  }
-
-  .rec-8 {
-    top: 1352px;
-    right: -15px;
-  }
-}
-
-// Styles for tablet
-
-@include min-width($tablet) {
-  .mobile-rec {
-    display: none;
-  }
-
-  .rec-1 {
-    top: 0;
-    left: 233px;
-    rotate: 180deg;
-  }
-
-  .rec-2 {
-    top: 0;
-    right: 215px;
-  }
-
-  .rec-3 {
-    top: 0;
-    left: 32px;
-  }
-
-  .rec-7 {
-    top: 74px;
-    left: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-4 {
-    top: 74px;
-    left: 106px;
-    background-image: url(../images/main/decorative/decorative-img-1@1x.jpg);
-    background-size: contain;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    width: 1440px;
+    height: 2248px;
+    background-image: url(../images/3d-printing/3d-printing-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-1@2x.jpg);
-    }
-  }
-
-  .rec-9 {
-    top: 148px;
-    left: 106px;
-
-    rotate: 90deg;
-  }
-
-  .rec-10 {
-    top: 222px;
-    left: 32px;
-    rotate: 270deg;
-  }
-
-  .rec-11 {
-    top: 296px;
-    left: 106px;
-    rotate: 180deg;
-  }
-
-  .rec-12 {
-    top: 358px;
-    left: 32px;
-    background-image: url(../images/main/decorative/decorative-img-3@1x.jpg);
-    background-size: contain;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-3@2x.jpg);
-    }
-  }
-
-  .rec-13 {
-    top: 432px;
-    left: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-14 {
-    top: 78px;
-    right: 106px;
-  }
-
-  .rec-15 {
-    top: 78px;
-    right: 32px;
-    background-image: url(../images/main/decorative/decorative-img-2@1x.jpg);
-    background-size: contain;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-2@2x.jpg);
-    }
-  }
-
-  .rec-16 {
-    top: 152px;
-    right: 106px;
-  }
-
-  .rec-5 {
-    top: 222px;
-    right: 32px;
-  }
-
-  .rec-17 {
-    top: 296px;
-    right: 106px;
-    rotate: 180deg;
-  }
-
-  .rec-18 {
-    top: 296px;
-    right: 32px;
-    border-radius: 72px 72px 0px 0px;
-    background-image: url(../images/main/decorative/decorative-img-4@1x.jpg);
-    background-size: contain;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-4@2x.jpg);
-    }
-  }
-
-  .rec-19 {
-    top: 370px;
-    right: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-20 {
-    top: 510px;
-    right: 32px;
-  }
-
-  .rec-21 {
-    top: 584px;
-    right: -17px;
-  }
-
-  .rec-6 {
-    top: 646px;
-    left: 32px;
-  }
-
-  .rec-8 {
-    top: 983px;
-    right: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-22 {
-    top: 940px;
-    left: 106px;
-    rotate: 180deg;
-  }
-
-  .rec-23 {
-    top: 1014px;
-    left: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-24 {
-    top: 1329px;
-    left: -17px;
-  }
-
-  .rec-25 {
-    top: 1433px;
-    right: 106px;
-    rotate: 180deg;
-  }
-  .rec-26 {
-    top: 1359px;
-    right: 32px;
-  }
-
-  .secondary-rec-1 {
-    top: 0;
-    left: 232px;
-    rotate: 180deg;
-  }
-
-  .secondary-rec-2 {
-    top: 0;
-    right: 215px;
-  }
-
-  .secondary-rec-3 {
-    top: 222px;
-    left: 32px;
-
-    @include max-width($desktop) {
-      border-radius: 0px 0px 35px 0px;
-    }
-  }
-
-  .secondary-rec-4 {
-    top: 1330px;
-    left: -17px;
-  }
-
-  .secondary-rec-5 {
-    top: 466px;
-    right: 32px;
-  }
-
-  .secondary-rec-6 {
-    top: 1031;
-    right: 32px;
-    @include max-width($desktop) {
-      rotate: 90deg;
-    }
-  }
-
-  .secondary-rec-7 {
-    top: 82px;
-    right: 32px;
-
-    @include max-width($desktop) {
-      width: 63px;
-      rotate: 270deg;
-    }
-  }
-
-  .secondary-rec-8 {
-    @include max-width($desktop) {
-      display: none;
+      background-image: url(../images/3d-printing/3d-printing-bg@2x.png);
     }
   }
 }
 
-// Styles for desktop
+// Take order page background
 
-@include min-width($desktop) {
-  .rec-1 {
-    top: 0;
-    left: 291px;
-    rotate: 180deg;
-  }
-
-  .rec-2 {
-    top: 0;
-    right: 267px;
-  }
-
-  .rec-3 {
-    top: 0;
-    left: 30px;
-  }
-
-  .rec-7 {
-    top: 144px;
-    left: 30px;
-    rotate: 180deg;
-  }
-
-  .rec-4 {
-    top: 144px;
-    left: 174px;
-    background-image: url(../images/main/decorative/decorative-img-1@1x.jpg);
-    background-size: contain;
+.bg-img-take-order {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/take-order/take-order-tablet-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-1@2x.jpg);
+      background-image: url(../images/take-order/take-order-tablet-bg@2x.png);
     }
   }
 
-  .rec-9 {
-    top: 288px;
-    left: 174px;
-
-    rotate: 180deg;
-  }
-
-  .rec-10 {
-    top: 432px;
-    left: 30px;
-    rotate: 180deg;
-  }
-
-  .rec-11 {
-    top: 576px;
-    left: 174px;
-    rotate: 180deg;
-  }
-
-  .rec-12 {
-    top: 699px;
-    left: 30px;
-    background-image: url(../images/main/decorative/decorative-img-3@1x.jpg);
-    background-size: contain;
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1850px;
+    background-image: url(../images/take-order/take-order-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-3@2x.jpg);
+      background-image: url(../images/take-order/take-order-bg@2x.png);
     }
   }
+}
 
-  .rec-13 {
-    top: 843px;
-    left: 30px;
+// Contacts page background
 
-    width: 110px;
-    rotate: 180deg;
-  }
-
-  .rec-14 {
-    top: 144px;
-    right: 176px;
-  }
-
-  .rec-15 {
-    top: 144px;
-    right: 32px;
-    background-image: url(../images/main/decorative/decorative-img-2@1x.jpg);
-    background-size: contain;
+.bg-img-contacts {
+  @include min-width-max-width($tablet, $desktop) {
+    width: 768px;
+    height: 1504px;
+    background-image: url(../images/contact/contact-tablet-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-2@2x.jpg);
+      background-image: url(../images/contact/contact-tablet-bg@2x.png);
     }
   }
 
-  .rec-16 {
-    top: 288px;
-    right: 176px;
-  }
-
-  .rec-5 {
-    top: 433px;
-    right: 32px;
-  }
-
-  .rec-17 {
-    top: 577px;
-    right: 176px;
-    rotate: 180deg;
-  }
-
-  .rec-18 {
-    top: 577px;
-    right: 32px;
-    border-radius: 72px 72px 0px 0px;
-    background-image: url(../images/main/decorative/decorative-img-4@1x.jpg);
-    background-size: contain;
+  @include min-width($desktop) {
+    width: 1440px;
+    height: 1561px;
+    background-image: url(../images/contact/contact-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/main/decorative/decorative-img-4@2x.jpg);
+      background-image: url(../images/contact/contact-bg@2x.png);
     }
-  }
-
-  .rec-19 {
-    top: 721px;
-    right: 32px;
-    rotate: 180deg;
-  }
-
-  .rec-20 {
-    top: 1021px;
-    right: 32px;
-  }
-
-  .rec-21 {
-    top: 1165px;
-    right: -64px;
-  }
-
-  .rec-6 {
-    top: 1244px;
-    left: 30px;
-
-    height: 161px;
-  }
-
-  .rec-8 {
-    top: 2058px;
-    right: 32px;
-  }
-
-  .rec-22 {
-    top: 1937px;
-    left: 174px;
-    rotate: 180deg;
-  }
-
-  .rec-23 {
-    top: 2081px;
-    left: 30px;
-
-    width: 145px;
-    rotate: 180deg;
-  }
-
-  .rec-24 {
-    top: 2598px;
-    left: 58px;
-  }
-
-  .rec-25 {
-    top: 2881px;
-    right: 176px;
-    rotate: 180deg;
-  }
-
-  .rec-26 {
-    top: 2737;
-    right: 32px;
-  }
-
-  .secondary-rec-1 {
-    top: 0;
-    left: 291px;
-  }
-
-  .secondary-rec-2 {
-    top: 0;
-    right: 267px;
-  }
-
-  .secondary-rec-3 {
-    width: 82px;
-    height: 78px;
-
-    top: 190px;
-    left: 35px;
-  }
-
-  .secondary-rec-4 {
-    top: 812px;
-    left: -22px;
-  }
-
-  .secondary-rec-5 {
-    top: 665px;
-    right: 31px;
-  }
-
-  .secondary-rec-6 {
-    top: 1708;
-    right: 32px;
-  }
-
-  .secondary-rec-7 {
-    top: 1838px;
-    right: 190px;
-
-    width: 116px;
-    rotate: 270deg;
-  }
-
-  .secondary-rec-8 {
-    top: 132px;
-    right: 64px;
-
-    width: 83px;
-    rotate: 270deg;
   }
 }

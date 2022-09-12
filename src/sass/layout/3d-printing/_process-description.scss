@@ -1,0 +1,153 @@
+.process-description {
+  padding-top: 38px;
+  padding-bottom: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include min-width($tablet) {
+    padding-top: 40px;
+  }
+
+  @include min-width($desktop) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  &__container {
+    @include min-width($desktop) {
+      padding-left: 149px;
+      padding-right: 236px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr);
+    grid-template-rows: auto auto auto;
+    @include min-width($tablet) {
+      grid-template-row: 462px 462px 462px;
+      row-gap: 60px;
+      @include min-width($desktop) {
+        grid-template-columns: 1055px;
+        grid-template-row: 324px 324px 324px;
+        row-gap: 100px;
+      }
+    }
+  }
+  &__item {
+    @include min-width($tablet) {
+      display: grid;
+      column-gap: 32px;
+      grid-template-columns: 336px 336px;
+      grid-template-rows: max-content;
+    }
+    @include min-width($desktop) {
+      grid-template-columns: 236px 734px;
+      grid-template-row: 324px 324px;
+      column-gap: 85px;
+    }
+  }
+  &__grid-1 {
+    display: grid;
+    row-gap: 16px;
+    grid-template-rows: auto auto auto;
+    margin-top: 20px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto auto;
+      margin-top: 0;
+    }
+  }
+  &__img-1 {
+    height: 384px;
+    width: 280px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      height: 100%;
+      width: 100%;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__grid-2 {
+    display: grid;
+    row-gap: 16px;
+    grid-template-rows: auto auto auto;
+    margin-top: 23px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto auto;
+      margin-top: 0;
+    }
+  }
+  &__img-2 {
+    height: 385px;
+    width: 280px;
+    margin: 54px auto 0;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      margin-top: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__grid-3 {
+    display: grid;
+    row-gap: 16px;
+    grid-template-rows: auto auto;
+    margin-top: 27px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto;
+      margin-top: 0;
+    }
+  }
+  &__img-3 {
+    height: 385px;
+    width: 280px;
+    margin: 51px auto 0;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      height: 100%;
+      width: 100%;
+      margin-top: 0;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__text {
+    @include font(300, 16, 20);
+    color: $main-color;
+    @include min-width($desktop) {
+      @include font(300, 18, 23);
+    }
+  }
+  &__span {
+    @include font(700, 16, 20);
+    color: $accent-color;
+    text-transform: uppercase;
+    @include min-width($desktop) {
+      @include font(700, 18, 23);
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    @include min-width($tablet) {
+      margin-top: 56px;
+      justify-content: start;
+    }
+  }
+  &__button {
+    padding: 0;
+    border-style: none;
+    outline: transparent;
+  }
+}

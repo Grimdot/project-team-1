@@ -8,6 +8,8 @@
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 400px;
+  min-width: 320px;
+
   @include min-width($desktop) {
     font-size: 16px;
     padding-top: 40px;
