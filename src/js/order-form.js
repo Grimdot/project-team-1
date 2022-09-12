@@ -88,7 +88,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   });
 
   dropDownBtn.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       dropDownItem.forEach(function (item) {
         item.focus();
       });
