@@ -153,6 +153,10 @@
   border-bottom: 1px solid $accent-color;
   transform: translateY(-50px);
 
+  @include min-width($desktop) {
+      @include font(400, 18, 20);
+    }
+
   .dropdown__button:focus + & {
     border-bottom: 1px solid rgba(72, 121, 150, 0.5);
   }
