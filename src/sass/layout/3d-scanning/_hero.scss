@@ -53,7 +53,13 @@
 }
 
 .scan-hero-list__text--indent {
-  display: block;
+  @include min-width($tablet) {
+    display: block;
+  }
+
+  @include min-width($desktop) {
+    display: block;
+  }
 }
 
 .scan-hero-list__text--indent-desktop {
