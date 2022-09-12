@@ -1,3 +1,9 @@
+.hero-contacts__container {
+  @include min-width($desktop) {
+    margin-left: 117px;
+  }
+}
+
 .emoji-flex {
   display: flex;
   @include min-width($desktop) {
