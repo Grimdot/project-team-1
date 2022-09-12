@@ -112,19 +112,29 @@
 
 .arrow-btn {
   display: none;
-  @include min-width($desktop) {
-    position: absolute;
-    top: 467px;
-    left: 230px;
 
+  @include min-width($tablet) {
+    position: absolute;
+    top: 230px;
+    left: 135px;
     display: block;
     color: $svg-icons-color;
+  }
+  @include min-width($desktop) {
+    top: 467px;
+    left: 230px;
   }
 }
 
 .anchor-btn-icn {
-  width: 32px;
-  height: 42px;
   box-sizing: content-box;
   fill: currentColor;
+  @include min-width($tablet) {
+    width: 16px;
+    height: 21px;
+  }
+  @include min-width($desktop) {
+    width: 32px;
+    height: 42px;
+  }
 }
