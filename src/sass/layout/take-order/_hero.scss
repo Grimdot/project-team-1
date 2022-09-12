@@ -5,15 +5,12 @@
 
 .order-header__block {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @include min-width($tablet) {
     align-items: flex-start;
   }
 
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     padding-left: 117px;
   }
 }
@@ -21,7 +18,7 @@
 .order-title {
   margin-bottom: 16px;
 
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     margin-bottom: 24px;
   }
 }
@@ -29,21 +26,24 @@
 .one-paragraph {
   margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include min-width($tablet) {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     margin-bottom: 24px;
   }
 }
 
 .header-text__item {
   display: block;
-  max-width: 280px;
-  @media screen and (min-width: 768px) {
+  @include max-width($tablet) {
+    max-width: 425px;
+    margin-left: auto;
+  }
+  @include min-width($tablet) {
     max-width: 336px;
   }
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     max-width: 500px;
   }
 }
@@ -51,34 +51,34 @@
 .take-order-img {
   margin: 0 auto;
 
-  @media screen and (max-width: 767px) {
-    max-width: 280px;
-    max-height: 171px;
+  @include max-width($tablet) {
+    max-width: 480px;
+    max-height: auto;
     margin-bottom: 16px;
   }
-  @media screen and (min-width: 768px) {
+  @include min-width($tablet) {
     width: 336px;
     height: 158px;
   }
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     width: 555px;
     height: 400px;
   }
 }
 
 .take-order__content-wrap {
-  @media screen and (min-width: 768px) {
+  @include min-width($tablet) {
     display: flex;
     align-items: center;
   }
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     display: flex;
     align-items: flex-start;
   }
 }
 
 .header-text__list {
-  @media screen and (min-width: 768px) {
+  @include min-width($tablet) {
     margin-left: 32px;
   }
 }
@@ -86,15 +86,15 @@
 .bg-img-wrap {
   display: none;
 
-  @media screen and (min-width: 1440px) {
+  @include min-width($desktop) {
     position: absolute;
     display: flex;
     top: 260px;
-    right: 32;
+    right: 64px;
   }
 }
 
-.bg-img {
+.take-order-bg-img {
   width: 203px;
   height: 203px;
   background-size: contain;
@@ -127,6 +127,7 @@
 .bg-img-3 {
   border-radius: 0px 0px 72px 0px;
   background-image: url('../images/take-order/take-order-hero-example-3@1x.jpg');
+  margin-right: 0;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
