@@ -202,3 +202,11 @@
     margin-left: 117px;
   }
 }
+
+.order-contacts__container {
+  @include min-width($desktop) {
+    width: 555px;
+    margin: 0;
+    padding-left: 32px;
+  }
+}
