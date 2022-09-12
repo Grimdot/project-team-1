@@ -6,6 +6,16 @@
   min-width: 320px;
 }
 
+.logo-thumb {
+  @media screen and (min-width: 1440px) {
+    margin-right: 150px;
+  }
+}
+
+.header__link-area {
+  padding: 15px 0;
+}
+
 .header__logo {
   width: 101px;
   height: 25px;
@@ -308,6 +318,10 @@
   position: absolute;
   pointer-events: none;
 
+  background-color: rgba(238, 233, 233, 0.3);
+
+  // background-color: transparent;
+
   top: calc(100%);
   left: 50%;
   transform: translate(calc(-50% - 2px), -5px);
@@ -320,7 +334,7 @@
   width: 162px;
   height: 94px;
 
-  background-image: url(../images/header/pop-up-phone-area.svg);
+  background-image: url(../images/header/pop-up-phone-area.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -373,7 +387,7 @@
   overflow: auto;
 
   padding: 40px 10px;
-  background-color: white;
+  background-color: transparent;
 
   transition-property: opacity, transform;
   transition-duration: 250ms;
