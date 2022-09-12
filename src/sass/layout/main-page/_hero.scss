@@ -1,6 +1,6 @@
-// .main-page-hero {
-//     padding-bottom: 40px;
-// }
+.main-page-hero {
+  padding-top: 20px;
+}
 
 .main-page-hero__title {
   @include font(400, 18, 21);
@@ -114,7 +114,7 @@
   display: none;
   @include min-width($desktop) {
     position: absolute;
-    top: 487px;
+    top: 467px;
     left: 230px;
 
     display: block;
