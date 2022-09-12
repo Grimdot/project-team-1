@@ -8,6 +8,34 @@
     padding: 8px 0px;
    
 }
+
+.hours{
+    flex-direction: column;
+    @include min-width($tablet){
+     
+    }
+}
+
+.contact-left{
+gap: 30px;
+
+    @include min-width($tablet) {
+
+    display: flex;
+    }
+        @include min-width($desktop){
+    display: flex;
+        flex-direction: column;
+        }
+}
 .contacts-container{
-   
+gap: 90px;
+@include min-width($tablet){
+    display: flex;
+}
+@include min-width($desktop){
+display: flex;
+    flex-direction: column;
+        
+    }
 }
