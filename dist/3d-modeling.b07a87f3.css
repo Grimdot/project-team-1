@@ -346,17 +346,22 @@ img {
   }
 }
 
+.order-contacts__wrapper {
+  justify-content: end;
+  display: flex;
+}
+
 @media screen and (max-width: 1439px) {
-  .take-order__contacts-img {
+  .order-contacts__mosaic {
     display: none;
   }
 }
 
-.take-order__contacts-img--top {
+.order-contacts__mosaic--top {
   display: flex;
 }
 
-.take-order__contacts-img--top .take-order__contacts-img--rectangled:first-child {
+.order-contacts__mosaic--top .order-contacts__mosaic--rectangled:first-child {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -368,7 +373,7 @@ img {
   right: 449px;
 }
 
-.take-order__contacts-img--top .take-order__contacts-img--rectangled:nth-child(2) {
+.order-contacts__mosaic--top .order-contacts__mosaic--rectangled:nth-child(2) {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -379,7 +384,7 @@ img {
   right: 298px;
 }
 
-.take-order__contacts-img--top .take-order__contacts-img--rectangled:nth-child(3) {
+.order-contacts__mosaic--top .order-contacts__mosaic--rectangled:nth-child(3) {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -391,11 +396,11 @@ img {
   right: 149px;
 }
 
-.take-order__contacts-img--bottom {
+.order-contacts__mosaic--bottom {
   display: flex;
 }
 
-.take-order__contacts-img--bottom .take-order__contacts-img--rectangled:first-child {
+.order-contacts__mosaic--bottom .order-contacts__mosaic--rectangled:first-child {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -407,7 +412,7 @@ img {
   right: 447px;
 }
 
-.take-order__contacts-img--bottom .take-order__contacts-img--rectangled:nth-child(2) {
+.order-contacts__mosaic--bottom .order-contacts__mosaic--rectangled:nth-child(2) {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -418,7 +423,7 @@ img {
   right: 304px;
 }
 
-.take-order__contacts-img--bottom .take-order__contacts-img--rectangled:nth-child(3) {
+.order-contacts__mosaic--bottom .order-contacts__mosaic--rectangled:nth-child(3) {
   width: 138px;
   height: 138px;
   background-image: url("mosaic.18e6c642.jpg");
@@ -427,11 +432,6 @@ img {
   position: absolute;
   bottom: 95px;
   right: 160px;
-}
-
-.test {
-  justify-content: end;
-  display: flex;
 }
 
 /*# sourceMappingURL=3d-modeling.b07a87f3.css.map */
