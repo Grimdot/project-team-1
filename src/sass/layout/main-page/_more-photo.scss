@@ -42,7 +42,7 @@
 
   margin-bottom: 16px;
 
-  @include min-width(320px) {
+  @include min-width($mobile) {
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -73,6 +73,8 @@
 }
 
 .more-photo__item {
+
+
   @include max-width(319px) {
     width: 100%;
   }
@@ -147,6 +149,11 @@
   pointer-events: none;
 
   transition: opacity $cubic;
+
+  @include max-width($mobile) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .slider--open {
@@ -160,7 +167,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100% - 30px * 2);
+  max-width: calc(100% - 30px * 2);
 
   transition: opacity $cubic;
 
