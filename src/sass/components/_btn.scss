@@ -23,7 +23,7 @@
 
   cursor: pointer;
 
-  transition: color background $cubic;
+  transition: color $cubic, background $cubic;
 
   &:hover,
   &:focus {
