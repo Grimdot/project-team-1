@@ -1,34 +1,83 @@
-.emoji {
-  width: 22px;
-}
-
 .emoji-flex {
   display: flex;
+  @include min-width($desktop) {
+    display: block;
+  }
 }
 
-.hero-contacts__hero-title {
-  margin-bottom: 20px;
-  color: $accent-color;
+.emoji {
+  width: 22px;
+  margin-left: 8px;
+  @include min-width($tablet) {
+    margin-left: 21px;
+  }
+  @include min-width($desktop) {
+    width: 49px;
+    margin-left: 0;
+    margin-top: 56px;
+  }
+}
+
+.contacts__hero-title {
+  margin-bottom: 16px;
+
+  @include max-width($tablet) {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  @include min-width($desktop) {
+    margin-bottom: 24px;
+  }
 }
 
 .video-style {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
-  width: 280px;
-    height: 171px;
-  @include min-width($tablet){
-    width: 280px;
-      height: 171px;
+}
+
+.iframe-wrap {
+  height: auto;
+  @include max-width($tablet) {
+    margin-bottom: 16px;
+  }
+  @include min-width($tablet) {
+    width: 336px;
+    height: 261px;
   }
 
-  @include min-width($desktop){
+  @include min-width($desktop) {
     width: 555px;
-      height: 313px;
+    height: 313px;
   }
 }
 
-.hero-wharp{
-            gap: 30px;
-          @include min-width($tablet){
-display: flex;
-          }
-        }
+.text-wrap {
+  @include max-width($tablet) {
+    margin: 0 auto;
+  }
+  @include min-width($tablet) {
+    max-width: 336px;
+  }
+  @include min-width($desktop) {
+    max-width: 515px;
+  }
+}
+
+.hero-contacts {
+  margin-top: 18px;
+  @include min-width($tablet) {
+    margin-top: 30px;
+  }
+  @include min-width($desktop) {
+    margin-top: 45px;
+    margin-left: 117px;
+  }
+}
+
+.hero-contacts__wrap {
+  @include min-width($tablet) {
+    display: flex;
+    gap: 32px;
+  }
+}

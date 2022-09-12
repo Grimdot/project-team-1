@@ -103,6 +103,7 @@
   padding-bottom: 4px;
   border-bottom: 1px solid $accent-color;
   outline: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -154,8 +155,8 @@
   transform: translateY(-50px);
 
   @include min-width($desktop) {
-      @include font(400, 18, 20);
-    }
+    @include font(400, 18, 20);
+  }
 
   .dropdown__button:focus + & {
     border-bottom: 1px solid rgba(72, 121, 150, 0.5);
@@ -301,5 +302,29 @@
 
   @include min-width($desktop) {
     margin-top: 24px;
+  }
+}
+
+.section-feedback {
+  @include min-width($desktop) {
+    width: 555px;
+    margin: 0;
+    padding: 0;
+    margin-right: 149px;
+  }
+}
+
+.section-feedback__container {
+  @include min-width($desktop) {
+    width: 555px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.order-form {
+  @include min-width($desktop) {
+    margin: 0;
+    padding: 0;
   }
 }

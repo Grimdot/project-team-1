@@ -1,41 +1,99 @@
-.secondary-title{
-    color: #2B2B2B;
-}
-.phone-link{
-    padding: 8px 0px;
-}
-.padding-font{
-    padding: 8px 0px;
-   
+.hours {
+  flex-direction: column;
+  @include min-width($tablet) {
+  }
 }
 
-.hours{
-    flex-direction: column;
-    @include min-width($tablet){
-     
-    }
+.phone-link {
+  color: $main-color;
 }
 
-.contact-left{
-gap: 30px;
+.padding-font {
+  margin-bottom: 8px;
+}
 
-    @include min-width($tablet) {
+.phone-link__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
 
+.email-link {
+  color: $main-color;
+}
+
+.phone {
+  @include max-width($tablet) {
+    margin-bottom: 24px;
+  }
+  @include min-width-max-width($tablet, $desktop) {
+    margin-right: 25px;
+  }
+  @include min-width($desktop) {
+    margin-bottom: 68px;
+  }
+}
+
+.email {
+  @include max-width($tablet) {
+    margin-bottom: 24px;
+  }
+  @include min-width($desktop) {
+    margin-bottom: 68px;
+  }
+}
+
+.hours {
+  @include min-width-max-width($tablet, $desktop) {
+    text-align: right;
+  }
+}
+
+.hours-title {
+  text-transform: uppercase;
+}
+
+.hours-item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.contact-left {
+  @include min-width-max-width($tablet, $desktop) {
     display: flex;
-    }
-        @include min-width($desktop){
-    display: flex;
-        flex-direction: column;
-        }
+  }
 }
-.contacts-container{
-gap: 90px;
-@include min-width($tablet){
+
+.contacts-container {
+  @include min-width-max-width($tablet, $desktop) {
     display: flex;
+    justify-content: space-between;
+  }
+  @include min-width($desktop) {
+    width: 515px;
+    margin: 0;
+    padding: 0;
+    margin-left: 149px;
+  }
 }
-@include min-width($desktop){
-display: flex;
-    flex-direction: column;
-        
-    }
+
+.contacts-info {
+  margin-bottom: 60px;
+  @include min-width($desktop) {
+    width: 515px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contacts-flex {
+  @include min-width($desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 80px;
+    margin-top: 100px;
+  }
 }
