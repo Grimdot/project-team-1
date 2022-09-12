@@ -1,4 +1,4 @@
-const show = document.querySelector("[data-show]");
+const show = document.querySelector(".more-photo__btn-show");
 const list = document.querySelector("[data-show-img]");
 
 let indexImg = 0;
