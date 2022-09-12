@@ -1,72 +1,136 @@
-.order-header {
-  display: flex;
-  width: 100%;
-}
-
 .images-style {
   border-radius: 15px;
   overflow: hidden;
 }
 
 .order-header__block {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-@media screen and (min-width: 768px) {
-  .order-header__block {
+  @media screen and (min-width: 768px) {
     align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 117px;
   }
 }
 
 .order-title {
-  font-size: 24px;
-  justify-content: center;
   margin-bottom: 16px;
-}
 
-@media screen and (min-width: 768px) {
-  .order-title {
-    font-size: 36px;
-  }
-}
-
-.tablet {
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .tablet {
-    flex-direction: row;
-    align-items: center;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 24px;
   }
 }
 
 .one-paragraph {
-  padding-bottom: 16px;
-}
+  margin-bottom: 16px;
 
-@media screen and (min-width: 768px) {
-  .one-paragraph {
-    padding-bottom: 0;
-    @include font(400, 16, 20);
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 24px;
   }
 }
 
-.header-text__stile {
-  @include font(300, 16, 20);
-  color: $main-color;
+.header-text__item {
+  display: block;
+  max-width: 280px;
+  @media screen and (min-width: 768px) {
+    max-width: 336px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 500px;
+  }
+}
+
+.take-order-img {
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    max-width: 280px;
+    max-height: 171px;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    height: 158px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 555px;
+    height: 400px;
+  }
+}
+
+.take-order__content-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .header-text__list {
-  margin-top: 16px;
+  @media screen and (min-width: 768px) {
+    margin-left: 32px;
+  }
 }
 
-@media screen and (min-width: 768px) {
-  .header-text__list {
-    margin-top: 0;
-    margin-left: 32px;
+.bg-img-wrap {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    display: flex;
+    top: 260px;
+    right: 32;
+  }
+}
+
+.bg-img {
+  width: 203px;
+  height: 203px;
+  background-size: contain;
+  margin-right: 32px;
+  filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
+}
+
+.bg-img-1 {
+  border-radius: 0px 72px 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-1@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-1@2x.jpg');
+  }
+}
+
+.bg-img-2 {
+  border-radius: 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-2@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-2@2x.jpg');
+  }
+}
+
+.bg-img-3 {
+  border-radius: 0px 0px 72px 0px;
+  background-image: url('../images/take-order/take-order-hero-example-3@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/take-order/take-order-hero-example-3@2x.jpg');
   }
 }
