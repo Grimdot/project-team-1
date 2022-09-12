@@ -14,7 +14,7 @@
   <!-- double icon button -->
 
   <button
-    class="menu-toggle js-open-menu"
+    class="menu-toggle"
     aria-expanded="false"
     aria-controls="mobile-menu"
     data-menu-button
@@ -25,7 +25,7 @@
     </svg>
   </button>
 
-  <div class="menu-container js-menu-container" id="mobile-menu">
+  <div class="menu-container" id="mobile-menu" data-menu>
     <ul class="menu__set">
       <li>
         <a class="menu__link menu__link--main" href="./index.html">Головна</a>
@@ -157,14 +157,7 @@
       </li>
     </ul>
   </div>
-
-  <!-- script -->
-  <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-  ></script>
-  <script defer src="js/mobile-menu.js"></script>
-  <script defer src="js/mobile-menu-double-button.js"></script>
 </header>
+
+
+<script defer src="js/mobile-menu-double-button.js"></script>
