@@ -1,5 +1,5 @@
 .process-description {
-  padding-top: 37.82px;
+  padding-top: 38px;
   padding-bottom: 60px;
   max-width: 1440px;
   margin: 0 auto;
@@ -12,153 +12,142 @@
     padding-bottom: 80px;
   }
   &__container {
-    @include min-width($desktop){
-    padding-left: 149px;
-    padding-right: 236px;
-  }
-  }
- &__list {
-  display: grid;
-  grid-template-columns: minmax(280px , 1fr) ;
-  grid-template-rows: auto auto auto;
-  @include min-width($tablet) {
-    grid-template-row:462px 462px 462px;
-    row-gap: 60px;
     @include min-width($desktop) {
-      grid-template-columns: 1055px ;
-      grid-template-row:324px 324px 324px;
-      row-gap: 100px;
+      padding-left: 149px;
+      padding-right: 236px;
     }
   }
- 
-   }
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr);
+    grid-template-rows: auto auto auto;
+    @include min-width($tablet) {
+      grid-template-row: 462px 462px 462px;
+      row-gap: 60px;
+      @include min-width($desktop) {
+        grid-template-columns: 1055px;
+        grid-template-row: 324px 324px 324px;
+        row-gap: 100px;
+      }
+    }
+  }
   &__item {
-  @include min-width($tablet) {
-display: grid;
-column-gap: 32px;
-  grid-template-columns:336px  336px ;
-  grid-template-rows: max-content;
+    @include min-width($tablet) {
+      display: grid;
+      column-gap: 32px;
+      grid-template-columns: 336px 336px;
+      grid-template-rows: max-content;
+    }
+    @include min-width($desktop) {
+      grid-template-columns: 236px 734px;
+      grid-template-row: 324px 324px;
+      column-gap: 85px;
+    }
   }
-  @include min-width($desktop) {
-    grid-template-columns:236px 734px ;
-    grid-template-row:324px 324px ;
-    column-gap: 85px;
-  }
- }
- &__grid-1 {
-  display: grid;
-  row-gap: 16px ;
-  grid-template-rows: auto auto auto;
-  margin-top: 19.82px ;
-  @include min-width($tablet) {
+  &__grid-1 {
+    display: grid;
+    row-gap: 16px;
     grid-template-rows: auto auto auto;
-    margin-top: 0 ;
+    margin-top: 20px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto auto;
+      margin-top: 0;
+    }
   }
- }
- &__img-1 {
-  height: 384.35px;
- width: 280px;
- margin: 0 auto;
- box-shadow:20px 20px 80px rgba(0, 0, 0, 0.15);
- border-radius: 50px 0px;
- @include min-width($tablet) {
-  height: 100%;
-  width: 100%;
- }
-  @include min-width($desktop) {
-    height: 324px;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
-
+  &__img-1 {
+    height: 384px;
+    width: 280px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      height: 100%;
+      width: 100%;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
   }
- }
- &__grid-2 {
-  display: grid;
-  row-gap: 16px;
-  grid-template-rows: auto auto auto;
-  margin-top: 23.38px ;
-  @include min-width($tablet) {
+  &__grid-2 {
+    display: grid;
+    row-gap: 16px;
     grid-template-rows: auto auto auto;
-    margin-top: 0 ;
-
+    margin-top: 23px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto auto;
+      margin-top: 0;
+    }
   }
- }
-&__img-2 {
-  height: 385.35px;
-  width: 280px;
- margin: 54.27px auto 0;
- box-shadow:20px 20px 80px rgba(0, 0, 0, 0.15);
- border-radius: 50px 0px;
-  @include min-width($tablet) {
-   margin-top: 0 ;
-   height: 100%;
-   width: 100%;
+  &__img-2 {
+    height: 385px;
+    width: 280px;
+    margin: 54px auto 0;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      margin-top: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
   }
-  @include min-width($desktop) {
-    height: 324px;
-    box-shadow :20px 20px 80px rgba(0, 0, 0, 0.25);
+  &__grid-3 {
+    display: grid;
+    row-gap: 16px;
+    grid-template-rows: auto auto;
+    margin-top: 27px;
+    @include min-width($tablet) {
+      grid-template-rows: auto auto;
+      margin-top: 0;
+    }
   }
-}
- &__grid-3 {
-  display: grid;
-  row-gap: 16px;
-  grid-template-rows: auto auto ;
-  margin-top: 26.95px ;
-  @include min-width($tablet) {
-    grid-template-rows:auto auto;
-    margin-top: 0 ;
+  &__img-3 {
+    height: 385px;
+    width: 280px;
+    margin: 51px auto 0;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 50px 0px;
+    @include min-width($tablet) {
+      height: 100%;
+      width: 100%;
+      margin-top: 0;
+    }
+    @include min-width($desktop) {
+      height: 324px;
+      box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+    }
   }
- }
- &__img-3 {
-  height: 385.35px;
-  width: 280px;
-  margin: 50.7px auto 0;
-  box-shadow:20px 20px 80px rgba(0, 0, 0, 0.15);
-  border-radius: 50px 0px;
-  @include min-width($tablet) {
-    height: 100%;
-  width: 100%;
-   margin-top: 0 ;
+  &__text {
+    @include font(300, 16, 20);
+    color: $main-color;
+    @include min-width($desktop) {
+      @include font(300, 18, 23);
+    }
   }
-  @include min-width($desktop) {
-    height: 324px;
-    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.25);
+  &__span {
+    @include font(700, 16, 20);
+    color: $accent-color;
+    text-transform: uppercase;
+    @include min-width($desktop) {
+      @include font(700, 18, 23);
+    }
   }
- }
-&__text {
-@include font(300, 16, 20);
-color: $main-color;
-@include min-width($desktop){
-@include font(300, 18, 23);
- }
-}
-&__span {
-  @include font(700, 16, 20); 
-  color: $accent-color;
-text-transform: uppercase;
-@include min-width($desktop){
-  @include font(300, 18, 23);
-   }
-}
-&__link {
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  @include min-width($tablet) {
-   margin-top: 56px;
-   justify-content: start;
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    @include min-width($tablet) {
+      margin-top: 56px;
+      justify-content: start;
+    }
   }
-}
- &__button {
-width: 280px;
-height: 56px;
-padding: 0;
-background: #F5F5FA;
-box-shadow: -10px -10px 20px #FFFFFF, 10px 10px 20px rgba(72, 121, 150, 0.1), 5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px #FFFFFF;
-border-radius: 30.5px;
-@include font(700, 16, 24);
-text-align: center;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: $accent-color;
-}
+  &__button {
+    padding: 0;
+    border-style: none;
+    outline: transparent;
+  }
 }

@@ -14,13 +14,13 @@
 .bg-img-mob {
   @include max-width($tablet) {
     max-width: 480px;
+    height: 1526px;
     background-image: url(../images/mobile-bg@1x.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/mobile-bg@2x.png);
-      max-width: 480px;
     }
   }
 }
