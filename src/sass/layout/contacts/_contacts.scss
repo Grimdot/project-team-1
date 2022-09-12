@@ -90,6 +90,8 @@
 .contacts-flex {
   @include min-width($desktop) {
     display: flex;
+    width: 1440px;
+    margin: 0 auto;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 0;
