@@ -1,11 +1,27 @@
 <header class="header container">
-  <button
+  <!-- one icon button -->
+
+  <!-- <button
     class="menu-toggle js-open-menu"
     aria-expanded="false"
     aria-controls="mobile-menu"
   >
     <svg class="icon-menu-close">
       <use href="./images/icons.svg#icon-burger-menu"></use>
+    </svg>
+  </button> -->
+
+  <!-- double icon button -->
+
+  <button
+    class="menu-toggle js-open-menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-menu-button
+  >
+    <svg class="icon-menu-close">
+      <use class="icon-menu" href="./images/icons.svg#icon-burger-menu"></use>
+      <use class="icon-cross" href="./images/icons.svg#icon-header-close"></use>
     </svg>
   </button>
 
@@ -59,24 +75,24 @@
 
       <li class="header__menu-item drop-down">
         <a class="header__menu-link" href="">Послуги</a>
-        <svg class="header__icon-menu">
-          <use href="./images/icons.svg#icon-test"></use>
+        <svg class="header__icon-menu" width="20" height="8">
+          <use href="./images/icons.svg#icon-header-arrow-2"></use>
         </svg>
 
         <ul class="sub__menu">
-          <li class="sub__menu--item">
+          <li class="sub__menu-item">
             <a class="header__sub-menu-link" href="./3d-modeling.html"
               >3D Моделювання</a
             >
           </li>
 
-          <li class="sub__menu--item">
+          <li class="sub__menu-item">
             <a class="header__sub-menu-link" href="./3d-scanning.html"
               >3D Сканування</a
             >
           </li>
 
-          <li class="sub__menu--item">
+          <li class="sub__menu-item">
             <a class="header__sub-menu-link" href="./3d-printing.html"
               >3D Друк</a
             >
@@ -95,27 +111,29 @@
   </div>
 
   <div class="adaptive-content">
-    <button class="phone-button" type="button">
-      <svg class="phone-icon" width="24" height="24">
-        <use href="./images/icons.svg#icon-tel"></use>
-      </svg>
-    </button>
+    <div class="pop-up-win">
+      <button class="phone-button" type="button">
+        <svg class="phone-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-tel"></use>
+        </svg>
+      </button>
 
-    <!-- <div class="pop-up__thumb">
-      <ul class="pop-up__contacts">
-        <li class="pop-up__contacts-item">
-          <a href="tel:+380936432288" class="pop-up__contacts-link">
-            +38 (093) 643 22 88
-          </a>
-        </li>
+      <div class="pop-up__thumb">
+        <ul class="pop-up__contacts">
+          <li class="pop-up__contacts-item">
+            <a href="tel:+380936432288" class="pop-up__contacts-link">
+              +38 (093) 643 22 88
+            </a>
+          </li>
 
-        <li class="pop-up__contacts-item">
-          <a href="tel:+380503454423" class="pop-up__contacts-link">
-            +38 (050) 345 44 23
-          </a>
-        </li>
-      </ul>
-    </div> -->
+          <li class="pop-up__contacts-item">
+            <a href="tel:+380503454423" class="pop-up__contacts-link">
+              +38 (050) 345 44 23
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <button class="lang-button" type="button">ENG</button>
 
@@ -148,4 +166,5 @@
     crossorigin="anonymous"
   ></script>
   <script defer src="js/mobile-menu.js"></script>
+  <script defer src="js/mobile-menu-double-button.js"></script>
 </header>
