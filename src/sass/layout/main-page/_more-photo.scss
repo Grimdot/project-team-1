@@ -3,7 +3,7 @@
   padding-bottom: 60px;
 
   @include max-width($tablet) {
-    width: 320px;
+    max-width: 320px;
   }
 
   @include min-width($tablet) {
@@ -160,9 +160,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 236px;
+  width: calc(100% - 30px * 2);
 
   transition: opacity $cubic;
+
+  @include min-width($mobile) {
+    width: 236px;
+  }
 
   @include min-width($tablet) {
     width: 554px;
