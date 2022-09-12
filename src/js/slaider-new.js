@@ -1,6 +1,6 @@
 const cards = Array.from(document.querySelectorAll('.more-photo__item'));
 
-const item = document.querySelector('.slider__item');
+const item = Array.from(document.querySelectorAll('.slider__item'));
 
 const img = Array.from(document.querySelectorAll('.slider__img'));
 
@@ -17,6 +17,7 @@ let cardIndex = -1;
 
 let indexto;
 
+console.log(item);
 //Додає класи слайдеру та зображенню в слайдері
 for (const card of cards) {
   card.addEventListener('click', Event => {
@@ -28,6 +29,10 @@ for (const card of cards) {
     indexto = sliderBox * cardIndex;
     sliderImg.style.left = -indexto + 'px';
     sliderImg.style.height = (img[cardIndex].clientHeight * sliderBox / img[cardIndex].clientWidth) + 'px';
+
+    item[cardIndex].style.opacity = '1';
+
+    // item[cardIndex].classList.add('slider__item--opacity')
   });
 }
 
@@ -46,16 +51,20 @@ sliderBtnLeft.addEventListener('click', Event => {
 function changePicture(dir) {
   if (dir == 'left') {
     indexto = indexto - sliderBox;
+    item[cardIndex].style.opacity = '0';
     cardIndex--;
     if (indexto < 0) {
+      item[0].style.opacity = '0';
       indexto = sliderImg.clientWidth - sliderBox;
       cardIndex = cards.length - 1;
     }
   } else if (dir == 'right') {
+    item[cardIndex].style.opacity = '0';
     indexto = indexto + sliderBox;
     cardIndex++;
 
     if (indexto > sliderImg.clientWidth - sliderBox) {
+      item[cards.length - 1].style.opacity = '0';
       indexto = 0;
       cardIndex = 0;
     }
@@ -63,6 +72,8 @@ function changePicture(dir) {
   console.log(cardIndex);
   sliderImg.style.left = -indexto + 'px';
   sliderImg.style.height = (img[cardIndex].clientHeight * sliderBox / img[cardIndex].clientWidth) + 'px';
+  // item[cardIndex-1].style.opacity = '0';
+  item[cardIndex].style.opacity = '1';
 }
 
 // Додає івент на кнопку закриття слайдеру
