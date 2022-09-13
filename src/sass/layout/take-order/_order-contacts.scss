@@ -27,6 +27,14 @@
   }
 }
 
+.info-tel__item-link {
+  color: $main-color;
+}
+
+.order-contacs__mail {
+  color: $main-color;
+}
+
 .order-contacts__title {
   font-weight: 700;
   font-size: 18px;
@@ -73,6 +81,9 @@
 
 .info-tel__item:first-child,
 .info-time__item:first-child {
+  @include min-width-max-width($tablet, $desktop) {
+    margin-bottom: 8px;
+  }
   @include min-width($desktop) {
     margin-bottom: 18px;
   }
