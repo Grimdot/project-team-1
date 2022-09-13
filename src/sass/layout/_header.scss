@@ -147,37 +147,37 @@
   align-items: center;
 }
 
-.lang-button {
-  margin: 0;
-  padding: 28px 0;
+// .lang-button {
+//   margin: 0;
+//   padding: 28px 0;
 
-  background-color: transparent;
-  border: none;
-  outline: none;
+//   background-color: transparent;
+//   border: none;
+//   outline: none;
 
-  cursor: pointer;
+//   cursor: pointer;
 
-  font-family: 'Caviar Dreams';
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
-  letter-spacing: 0.01em;
+//   font-family: 'Caviar Dreams';
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.28;
+//   letter-spacing: 0.01em;
 
-  color: #bdbdbd;
+//   color: #bdbdbd;
 
-  @media screen and (max-width: 767px) {
-    margin-left: 24px;
-  }
+//   @media screen and (max-width: 767px) {
+//     margin-left: 24px;
+//   }
 
-  @media screen and (min-width: 768px) and (max-width: 1439px) {
-    margin-right: 38px;
-  }
+//   @media screen and (min-width: 768px) and (max-width: 1439px) {
+//     margin-right: 38px;
+//   }
 
-  @media screen and (min-width: 1440px) {
-    margin-right: 118px;
-    padding: 63px 0;
-  }
-}
+//   @media screen and (min-width: 1440px) {
+//     margin-right: 118px;
+//     padding: 63px 0;
+//   }
+// }
 
 .header__contacts {
   display: none;
@@ -458,4 +458,40 @@
   width: 7px;
   height: 7px;
   background-color: currentColor;
+}
+
+// input lang
+.lang {
+  margin: 0;
+  padding: 28px 0;
+
+  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    margin-left: 24px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    margin-right: 38px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 118px;
+    padding: 63px 0;
+  }
+}
+
+.lang__label {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  font-family: 'Caviar Dreams';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.01em;
+
+  color: #bdbdbd;
 }
