@@ -1,8 +1,6 @@
 .footer {
   position: relative;
-
-  z-index: 999;
-
+  z-index: 1;
   display: flex;
   background-color: $secondary-background-color;
   padding-top: 32px;

@@ -59,6 +59,12 @@
   }
 }
 
+.days {
+  @include max-width($desktop) {
+    display: block;
+  }
+}
+
 .contact-left {
   @include min-width-max-width($tablet, $desktop) {
     display: flex;
