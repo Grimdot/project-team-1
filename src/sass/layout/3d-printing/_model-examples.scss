@@ -1,5 +1,12 @@
 .model-examples {
   padding-top: 20px;
+  @include min-width($tablet) {
+    padding-top: 30px;
+  }
+  @include min-width($desktop) {
+    padding-top: 45px;
+  }
+
   &__title {
     margin-bottom: 16px;
 
@@ -151,5 +158,11 @@
       padding: 40px 40px 20px;
       box-sizing: content-box;
     }
+  }
+}
+
+.model-examples__text {
+  @include min-width-max-width($tablet, $desktop) {
+    padding-top: 0;
   }
 }

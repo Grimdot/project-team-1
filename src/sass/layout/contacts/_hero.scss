@@ -25,11 +25,13 @@
 }
 
 .contacts__hero-title {
-  margin-bottom: 16px;
-
   @include max-width($tablet) {
     max-width: 420px;
     margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  @include min-width($tablet) {
+    margin-bottom: 16px;
   }
   @include min-width($desktop) {
     margin-bottom: 24px;
@@ -71,12 +73,12 @@
 }
 
 .hero-contacts {
-  margin-top: 18px;
+  padding-top: 20px;
   @include min-width($tablet) {
-    margin-top: 30px;
+    padding-top: 30px;
   }
   @include min-width($desktop) {
-    margin-top: 45px;
+    padding-top: 45px;
   }
 }
 

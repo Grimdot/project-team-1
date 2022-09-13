@@ -2,6 +2,15 @@
   border-radius: 15px;
   overflow: hidden;
 }
+.order-header {
+  padding-top: 20px;
+  @include min-width($tablet) {
+    padding-top: 30px;
+  }
+  @include min-width($desktop) {
+    padding-top: 45px;
+  }
+}
 
 .order-header__block {
   position: relative;

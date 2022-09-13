@@ -1,12 +1,10 @@
 .order-contacts {
   position: relative;
-  padding-top: 40px;
   padding-bottom: 60px;
   padding-right: 32px;
   padding-left: 32px;
 
   @include min-width($tablet) {
-    padding-top: 60px;
     padding-bottom: 60px;
   }
 
@@ -194,7 +192,7 @@
   }
 }
 
-.section-feedback {
+.take-order__section-feedback {
   @include min-width($desktop) {
     width: 555px;
     margin: 0;

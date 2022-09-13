@@ -11,6 +11,16 @@
   }
 }
 
+.scan-hero {
+  padding-top: 20px;
+  @include min-width($tablet) {
+    padding-top: 30px;
+  }
+  @include min-width($desktop) {
+    padding-top: 45px;
+  }
+}
+
 .scan-hero__hero-title {
   margin-bottom: 16px;
   @include min-width($desktop) {

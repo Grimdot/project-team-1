@@ -1,7 +1,10 @@
 .modeling-hero {
-  padding-top: 40px;
+  padding-top: 20px;
+  @include min-width($tablet) {
+    padding-top: 30px;
+  }
   @include min-width($desktop) {
-    padding-top: 100px;
+    padding-top: 45px;
   }
 }
 

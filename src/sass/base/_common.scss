@@ -3,6 +3,9 @@
 body {
   font-family: 'Cera Pro', sans-serif;
   @include font(300, 16, 20);
+  @include min-width($desktop) {
+    @include font(300, 18, 23);
+  }
   background-color: $background-color;
   color: $main-color;
 }
@@ -16,11 +19,11 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   @include min-width($tablet) {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
   @include min-width($desktop) {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 }
 
