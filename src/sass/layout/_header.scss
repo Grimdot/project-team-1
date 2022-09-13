@@ -429,11 +429,12 @@
   font-size: 24px;
   line-height: 1.25;
   letter-spacing: 0.01em;
+  color: $accent-color;
 
   text-transform: uppercase;
 }
 
-.menu__link--main {
+.menu__current-tab {
   color: white;
   -webkit-text-stroke: 1px $accent-color;
 }
