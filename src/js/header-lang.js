@@ -34,6 +34,15 @@ let hash = window.location.hash;
 hash = hash.substr(1);
 
 
+// відслідковує яка мова в посиланні
+for (index = 0; index < allLang.length; ++index){
+  if (hash == allLang[index]){
+    langInput[index].checked = 'true';
+    window.location.hash = '#' + hash;
+  } else {
+    window.location.hash = '#ua';
+}
+}
 
 //Перевірка вибраної мови
 for (index = 0; index < langInput.length; ++index) {
@@ -69,6 +78,6 @@ form.addEventListener('click', Event => {
       hash = allLang[0];
     }
     // console.log(hash);
-    // window.location.hash =  '#' + hash;
+    window.location.hash =  '#' + hash;
     location.reload();
 });
