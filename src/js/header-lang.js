@@ -1,25 +1,3 @@
-// const langBtn = document.querySelector('.lang-button');
-
-// let indexLang = 0;
-// console.log({ indexLang });
-
-// langBtn.addEventListener('click', Event => {
-//     if (indexLang == 0) {
-//         langBtn.innerHTML = "ENG";
-//         document.documentElement.lang = 'en';
-//         indexLang = indexLang + 1;
-
-//     }else if (indexLang == 1) {
-//         langBtn.innerHTML = "RUS";
-//         document.documentElement.lang = 'ru';
-//         indexLang= indexLang + 1;
-
-//     }else {
-//         langBtn.innerHTML = "UKR";
-//         document.documentElement.lang = 'uk';
-//         indexLang = 0;
-//     }
-// });
 
 const langInput = Array.from(document.querySelectorAll('.lang__input'));
 const langLabel = Array.from(document.querySelectorAll('.lang__label'));
@@ -29,7 +7,6 @@ const form = document.querySelector('.lang');
 const allLang = ['uk', 'ru', 'en'];
 
 let indexInput = 0;
-// let hash = 'uk';
 let hash = window.location.hash;
 hash = hash.substr(1);
 
@@ -77,7 +54,6 @@ form.addEventListener('click', Event => {
       langLabel[indexInput].classList.remove('visually-hidden');
       hash = allLang[0];
     }
-    // console.log(hash);
     window.location.hash =  '#' + hash;
     location.reload();
 });
