@@ -1,0 +1,193 @@
+<header class="header container">
+  <!-- one icon button -->
+
+  <!-- <button
+    class="menu-toggle js-open-menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+  >
+    <svg class="icon-menu-close">
+      <use href="./images/icons.svg#icon-burger-menu"></use>
+    </svg>
+  </button> -->
+
+  <!-- double icon button -->
+
+  <button
+    class="menu-toggle"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-menu-button
+  >
+    <svg class="icon-menu-close">
+      <use class="icon-menu" href="./images/icons.svg#icon-burger-menu"></use>
+      <use class="icon-cross" href="./images/icons.svg#icon-header-close"></use>
+    </svg>
+  </button>
+
+  <div class="menu-container" id="mobile-menu" data-menu>
+    <ul class="menu__set">
+      <li>
+        <a class="menu__link menu__link--main" href="./index.html">Головна</a>
+      </li>
+      <li>
+        <a class="menu__link" href="">Послуги</a>
+      </li>
+      <li>
+        <a class="menu__link menu__link--services" href="./3d-modeling.html"
+          >3D Моделювання</a
+        >
+      </li>
+      <li>
+        <a class="menu__link menu__link--services" href="./3d-scanning.html"
+          >3D Сканування</a
+        >
+      </li>
+      <li>
+        <a class="menu__link menu__link--services" href="./3d-printing.html"
+          >3D Друк</a
+        >
+      </li>
+      <li>
+        <a class="menu__link" href="./take-order.html">Замовити</a>
+      </li>
+      <li>
+        <a class="menu__link" href="./contacts.html">Контакти</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="logo-thumb">
+    <a class="header__link-area" href="./index.html">
+      <img
+        class="header__logo"
+        src="./images/logo.svg"
+        alt="Логотип компанії"
+      />
+    </a>
+  </div>
+
+  <div>
+    <ul class="header__menu">
+      <li class="header__menu-item">
+        <a class="header__menu-link" href="./index.html">Головна</a>
+      </li>
+
+      <li class="header__menu-item drop-down">
+        <a class="header__menu-link" href="">Послуги</a>
+        <svg class="header__icon-menu" width="20" height="8">
+          <use href="./images/icons.svg#icon-header-arrow-2"></use>
+        </svg>
+
+        <ul class="sub__menu">
+          <li class="sub__menu-item">
+            <a class="header__sub-menu-link" href="./3d-modeling.html"
+              >3D Моделювання</a
+            >
+          </li>
+
+          <li class="sub__menu-item">
+            <a class="header__sub-menu-link" href="./3d-scanning.html"
+              >3D Сканування</a
+            >
+          </li>
+
+          <li class="sub__menu-item">
+            <a class="header__sub-menu-link" href="./3d-printing.html"
+              >3D Друк</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__menu-item">
+        <a class="header__menu-link" href="./take-order.html">Замовити</a>
+      </li>
+
+      <li class="header__menu-item">
+        <a class="header__menu-link" href="./contacts.html">Контакти</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="adaptive-content">
+    <div class="pop-up-win">
+      <button class="phone-button" type="button">
+        <svg class="phone-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-tel"></use>
+        </svg>
+      </button>
+
+      <div class="pop-up__thumb">
+        <ul class="pop-up__contacts">
+          <li class="pop-up__contacts-item">
+            <a href="tel:+380936432288" class="pop-up__contacts-link">
+              +38 (093) 643 22 88
+            </a>
+          </li>
+
+          <li class="pop-up__contacts-item">
+            <a href="tel:+380503454423" class="pop-up__contacts-link">
+              +38 (050) 345 44 23
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="lang" action="">
+      <label class="lang__label">
+        <input
+          class="lang__input visually-hidden"
+          type="radio"
+          name="lang"
+          value="uk"
+          checked="true"
+        />
+        UKR
+      </label>
+      <label class="lang__label visually-hidden">
+        <input
+          class="lang__input visually-hidden"
+          type="radio"
+          name="lang"
+          value="ru"
+        />
+        RUS
+      </label>
+      <label class="lang__label visually-hidden">
+        <input
+          class="lang__input visually-hidden"
+          type="radio"
+          name="lang"
+          value="en"
+        />
+        ENG
+      </label>
+    </form>
+
+    <!-- <button class="lang-button" type="button">UKR</button> -->
+
+    <ul class="header__contacts">
+      <li class="header__contacts-item">
+        <a href="tel:+380936432288" class="header__contacts-link">
+          <svg class="header__contacts-logo" width="14" height="14">
+            <use href="./images/icons.svg#icon-tel"></use>
+          </svg>
+          +38 (093) 643 22 88
+        </a>
+      </li>
+
+      <li class="header__contacts-item">
+        <a href="tel:+380503454423" class="header__contacts-link">
+          <svg class="header__contacts-logo" width="14px" height="14px">
+            <use href="./images/icons.svg#icon-tel"></use>
+          </svg>
+          +38 (050) 345 44 23
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script defer src="js/mobile-menu-double-button.js"></script>
