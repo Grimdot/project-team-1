@@ -1,0 +1,1 @@
+{"mappings":"AAAI,IAAK,IAAIA,OAAOC,QACdC,SAASC,cAAcH,KAAKI,UACtBH,QAAQD,KAAKK","sources":["src/js/add-lang.js"],"sourcesContent":["    for (let key in langArr) {\n      document.querySelector(key).innerHTML =\n            langArr[key][hash];\n    }"],"names":["key","langArr","document","querySelector","innerHTML","hash"],"version":3,"file":"index.cf355c2f.js.map"}
