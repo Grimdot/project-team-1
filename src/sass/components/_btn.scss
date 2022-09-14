@@ -40,15 +40,15 @@
 .order-form-button {
   text-align: center;
 
-  margin-top: 40px;
-  margin-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 
   @include min-width($tablet) {
-    margin-top: 60px;
+    padding-top: 60px;
   }
 
   @include min-width($desktop) {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }

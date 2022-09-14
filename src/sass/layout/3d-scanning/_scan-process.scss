@@ -18,15 +18,6 @@
   gap: 32px;
   @include max-width(767px) {
     gap: 16px 20px;
-    margin-bottom: 40px;
-  }
-
-  @include min-width($tablet) {
-    margin-bottom: 60px;
-  }
-
-  @include min-width($desktop) {
-    margin-bottom: 80px;
   }
 }
 

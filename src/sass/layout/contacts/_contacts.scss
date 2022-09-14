@@ -85,7 +85,7 @@
 }
 
 .contacts-info {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   @include font(400, 16, 20);
   @include min-width($desktop) {
     font-size: 18px;

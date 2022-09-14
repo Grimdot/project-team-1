@@ -12,7 +12,7 @@
 
     @include min-width($desktop) {
       margin-bottom: 24px;
-      padding-left: 117px;
+      margin-left: 117px;
     }
   }
   &__list {
@@ -131,7 +131,7 @@
     @include min-width($desktop) {
       width: 240px;
       height: 240px;
-      padding: 40px 40px 21px;
+
       box-sizing: content-box;
     }
   }
@@ -139,7 +139,7 @@
     @include min-width($desktop) {
       width: 240px;
       height: 240px;
-      padding: 40px 40px 20px;
+
       box-sizing: content-box;
     }
   }
@@ -147,7 +147,7 @@
     @include min-width($desktop) {
       width: 240px;
       height: 240px;
-      padding: 40px 40px 20px;
+
       box-sizing: content-box;
     }
   }
@@ -155,7 +155,7 @@
     @include min-width($desktop) {
       width: 240px;
       height: 240px;
-      padding: 40px 40px 20px;
+
       box-sizing: content-box;
     }
   }
@@ -164,5 +164,26 @@
 .model-examples__text {
   @include min-width-max-width($tablet, $desktop) {
     padding-top: 0;
+  }
+}
+
+.model-examples__thumb {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  @include min-width($desktop) {
+    gap: 20px;
+  }
+}
+
+.model-examples__block-text {
+  @include max-width($desktop) {
+    display: block;
+  }
+  @include min-width($desktop) {
+    margin-left: 0.5rem;
   }
 }

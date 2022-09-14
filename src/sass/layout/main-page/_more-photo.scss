@@ -40,7 +40,9 @@
   flex-wrap: wrap;
   gap: 16px;
 
-  margin-bottom: 16px;
+  @include max-width($tablet) {
+    margin-bottom: 16px;
+  }
 
   @include min-width($mobile) {
     max-width: 280px;
@@ -51,7 +53,6 @@
   @include min-width($tablet) {
     max-width: 704px;
     gap: 32px;
-    margin-bottom: 12px;
   }
 
   @include min-width($desktop) {
@@ -73,8 +74,6 @@
 }
 
 .more-photo__item {
-
-
   @include max-width(319px) {
     width: 100%;
   }
@@ -127,7 +126,7 @@
   }
 
   @include min-width-max-width($tablet, $desktop) {
-    visibility: hidden;
+    display: none;
   }
 }
 

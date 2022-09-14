@@ -20,21 +20,28 @@
 
   max-width: 250px;
 
+  @include max-width($tablet) {
+    margin-bottom: 16px;
+  }
+
   @include min-width($tablet) {
     font-size: 24px;
     max-width: 648px;
+    margin-bottom: 24px;
   }
 
   @include min-width($desktop) {
     font-size: 36px;
     max-width: 842px;
     margin-left: 117px;
+    margin-bottom: 40px;
   }
 }
 
 .we-create-model__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 
   @include min-width($tablet) {
     flex-wrap: nowrap;
@@ -43,22 +50,14 @@
 }
 
 .we-create-model__item {
-  width: 50%;
-  width: calc(50% - 10px);
-  margin-top: 16px;
-  margin-right: 20px;
+  flex-basis: (calc((100% - 20px) / 2));
 
   &:nth-child(even) {
     margin-right: 0;
   }
 
   @include min-width($tablet) {
-    margin-top: 24px;
-    margin-right: 0;
-  }
-
-  @include min-width($desktop) {
-    margin-top: 40px;
+    flex-basis: (calc((100% - 96px) / 4));
   }
 }
 
